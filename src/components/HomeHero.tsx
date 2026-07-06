@@ -24,7 +24,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
 
   const photos = [
     {
-      src: "/src/assets/images/dubai_skyline_luxury_1783282434679.jpg",
+      src: "/src/assets/images/advisor_portrait_1783280314130.jpg",
       title: "Dubai — Global Business Hub",
       tag: "Dubai"
     },
