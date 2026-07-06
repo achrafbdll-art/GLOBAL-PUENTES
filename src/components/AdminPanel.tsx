@@ -66,7 +66,7 @@ export default function AdminPanel({ user }: AdminPanelProps) {
           <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
           <h3 className="text-xl font-bold uppercase tracking-tight">Accès Administrateur Refusé</h3>
           <p className="text-xs font-light mt-3 leading-relaxed">
-            Seuls les profils d'administration du cabinet d'affaires Global Puentes sont autorisés à visualiser les fichiers clients et correspondances reçues.
+            Seuls les profils d'administration du cabinet d'affaires ENWII sont autorisés à visualiser les fichiers clients et correspondances reçues.
           </p>
         </div>
       </div>

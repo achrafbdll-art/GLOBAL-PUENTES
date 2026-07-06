@@ -233,7 +233,7 @@ export default function MemberDashboard({ user, setCurrentRoute }: MemberDashboa
                 {user.paidAmount && <span className="text-[10px] text-neutral-500 font-mono">Contribution: ${user.paidAmount}</span>}
               </div>
               <h2 className="text-xl sm:text-2xl font-bold text-white uppercase tracking-tight font-serif italic">{user.fullName}</h2>
-              <p className="text-xs text-[#F5E6D3]/60 font-serif italic">Espace d'accompagnement de direction d'affaires - Global Puentes</p>
+              <p className="text-xs text-[#F5E6D3]/60 font-serif italic">Espace d'accompagnement de direction d'affaires - ENWII</p>
             </div>
           </div>
 

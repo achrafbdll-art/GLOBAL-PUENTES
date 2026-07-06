@@ -26,7 +26,7 @@ export default function Footer({ setCurrentRoute }: FooterProps) {
       focusItem4: "Mentorat Privé & Négociation",
       officeHeader: "Bureau International",
       officeAddress: "Downtown Boulevard, Al-Shammari Tower, Émirats Arabes Unis (EAU) & Bureau International",
-      copyright: "Global Puentes. Tous droits réservés. Cabinet de Conseil d'Affaires International.",
+      copyright: "ENWII. Tous droits réservés. Cabinet de Conseil d'Affaires International.",
       stripeLabel: "Paiements Chiffrés SSL - Stripe",
       terms: "Conditions Générales",
       privacy: "Politique de Confidentialité"
@@ -46,7 +46,7 @@ export default function Footer({ setCurrentRoute }: FooterProps) {
       focusItem4: "Mentoría Privada y Negociación",
       officeHeader: "Oficina Internacional",
       officeAddress: "Downtown Boulevard, Al-Shammari Tower, Emiratos Árabes Unidos (EAU) y Oficina Internacional",
-      copyright: "Global Puentes. Todos los derechos reservados. Consultoría de Negocios Internacionales.",
+      copyright: "ENWII. Todos los derechos reservados. Consultoría de Negocios Internacionales.",
       stripeLabel: "Pagos Encriptados SSL - Stripe",
       terms: "Términos y Condiciones",
       privacy: "Política de Privacidad"
@@ -66,7 +66,7 @@ export default function Footer({ setCurrentRoute }: FooterProps) {
       focusItem4: "التوجيه الخاص والمفاوضات",
       officeHeader: "المكتب الدولي",
       officeAddress: "داون تاون بوليفارد، برج الشمري، الإمارات العربية المتحدة والمكتب الدولي",
-      copyright: "غلوبال بوينتس (Global Puentes). جميع الحقوق محفوظة. مكتب الاستشارات التجارية الدولية.",
+      copyright: "ENWII. جميع الحقوق محفوظة. مكتب الاستشارات التجارية الدولية.",
       stripeLabel: "مدفوعات مشفرة آمنة SSL - سترايب",
       terms: "الشروط والأحكام",
       privacy: "سياسة الخصوصية"
@@ -161,7 +161,7 @@ export default function Footer({ setCurrentRoute }: FooterProps) {
               </li>
               <li className="flex items-center space-x-2.5">
                 <Mail className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
-                <span>office@globalpuentes.com</span>
+                <span>office@enwii.com</span>
               </li>
             </ul>
           </div>

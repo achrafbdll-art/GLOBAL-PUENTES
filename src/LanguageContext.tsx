@@ -13,13 +13,13 @@ const LanguageContext = createContext<LanguageContextProps | undefined>(undefine
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
-    const saved = localStorage.getItem("global_puentes_lang");
+    const saved = localStorage.getItem("enwii_lang");
     return (saved as Language) || "fr";
   });
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem("global_puentes_lang", lang);
+    localStorage.setItem("enwii_lang", lang);
   };
 
   // Adjust text direction for Arabic

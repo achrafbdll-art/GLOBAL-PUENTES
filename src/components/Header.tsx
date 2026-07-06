@@ -58,7 +58,7 @@ export default function Header({ currentRoute, setCurrentRoute, user, onLogout }
           <div className="flex items-center space-x-6">
             <span className="hidden sm:inline-flex items-center space-x-1.5 text-neutral-500 font-serif lowercase tracking-normal italic text-[11px]">
               <Mail className="w-3.5 h-3.5 text-[#D4AF37]/75" />
-              <span>contact@globalpuentes.com</span>
+              <span>contact@enwii.com</span>
             </span>
             
             {/* Elegant Circular Language Badge Selectors (Matching FR | GB | MA style) */}

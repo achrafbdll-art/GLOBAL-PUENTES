@@ -83,8 +83,13 @@ export default function PricingTable({ setCurrentRoute, user, setPaymentAmount }
         throw new Error(data.error || "Impossible d'initier la session.");
       }
 
-      // Route to our high-fidelity Stripe payment checkout simulator page
-      setCurrentRoute("payment");
+      if (data.isRealStripe && data.checkoutUrl) {
+        // Redirect directly to Stripe's secure hosted payment checkout page
+        window.location.href = data.checkoutUrl;
+      } else {
+        // Route to our high-fidelity Stripe payment checkout simulator page
+        setCurrentRoute("payment");
+      }
     } catch (err: any) {
       console.error(err);
       setError(err.message || "Une erreur s'est produite. Veuillez réessayer.");

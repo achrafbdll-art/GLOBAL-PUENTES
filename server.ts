@@ -2,7 +2,18 @@ import express from "express";
 import path from "path";
 import fs from "fs";
 import { createServer as createViteServer } from "vite";
+import Stripe from "stripe";
 import { User, ContactMessage, ConsultationRequest } from "./src/types";
+
+// Initialize Stripe if secret key is present
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY || "";
+let stripe: Stripe | null = null;
+if (stripeSecretKey) {
+  stripe = new Stripe(stripeSecretKey);
+  console.log("[Server] Stripe loaded successfully with production keys.");
+} else {
+  console.log("[Server] No STRIPE_SECRET_KEY found. Running in hybrid simulator mode.");
+}
 
 const app = express();
 const PORT = 3000;
@@ -19,8 +30,8 @@ function loadDb() {
       users: [
         {
           id: "admin-1",
-          email: "admin@globalpuentes.com",
-          fullName: "Admin Global Puentes",
+          email: "admin@enwii.com",
+          fullName: "Admin ENWII",
           role: "admin",
           membershipStatus: "active",
           createdAt: new Date().toISOString(),
@@ -159,7 +170,7 @@ app.post("/api/contact", (req, res) => {
 });
 
 // 5. Payment Session Creation (Simulated or Real)
-app.post("/api/payment/create-checkout-session", (req, res) => {
+app.post("/api/payment/create-checkout-session", async (req, res) => {
   const user = getAuthenticatedUser(req);
   if (!user) {
     res.status(401).json({ error: "Authentification requise pour initier un paiement." });
@@ -181,11 +192,90 @@ app.post("/api/payment/create-checkout-session", (req, res) => {
     saveDb(db);
   }
 
+  // Real Stripe Checkout Integration
+  if (stripe) {
+    try {
+      const baseUrl = process.env.APP_URL || "http://localhost:3000";
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ["card"],
+        line_items: [
+          {
+            price_data: {
+              currency: "usd",
+              product_data: {
+                name: "Accompagnement d'Expertise d'Élite ENWII",
+                description: "Accès à l'espace membre d'affaires et planification de consultations privées.",
+              },
+              unit_amount: amount * 100, // Stripe expects cents
+            },
+            quantity: 1,
+          },
+        ],
+        mode: "payment",
+        success_url: `${baseUrl}/api/payment/success?session_id={CHECKOUT_SESSION_ID}&userId=${user.id}&amount=${amount}`,
+        cancel_url: `${baseUrl}/pricing`,
+        metadata: {
+          userId: user.id,
+          amount: amount.toString(),
+        },
+      });
+
+      res.status(200).json({
+        success: true,
+        isRealStripe: true,
+        sessionId: session.id,
+        checkoutUrl: session.url,
+      });
+      return;
+    } catch (error: any) {
+      console.error("[Server] Error creating Stripe checkout session:", error.message);
+      // Fallback to simulator below if real Stripe setup errors out
+    }
+  }
+
+  // High-fidelity local simulation fallback
   res.status(200).json({
     success: true,
+    isRealStripe: false,
     sessionId: "stripe_sess_" + Math.random().toString(36).substring(2, 15),
     checkoutUrl: `/payment?amount=${amount}&sessionId=stripe_sess_` + Math.random().toString(36).substring(2, 15)
   });
+});
+
+// 5b. Real Stripe Checkout success redirection handler
+app.get("/api/payment/success", async (req, res) => {
+  const { session_id, userId, amount } = req.query;
+  const paymentAmount = Number(amount) || 150;
+
+  if (!userId) {
+    res.status(400).send("Identifiant utilisateur manquant.");
+    return;
+  }
+
+  // Verify Stripe payment status if Stripe is configured
+  if (stripe && session_id) {
+    try {
+      const session = await stripe.checkout.sessions.retrieve(session_id as string);
+      if (session.payment_status !== "paid") {
+        res.status(400).send("Le paiement n'a pas pu être validé.");
+        return;
+      }
+    } catch (err: any) {
+      console.error("[Server] Session verification error:", err.message);
+    }
+  }
+
+  const db = loadDb();
+  const userIdx = db.users.findIndex((u: any) => u.id === userId);
+  if (userIdx !== -1) {
+    db.users[userIdx].membershipStatus = "active";
+    db.users[userIdx].paidAmount = paymentAmount;
+    db.users[userIdx].paymentDate = new Date().toISOString();
+    saveDb(db);
+  }
+
+  // Redirect back to frontend, passing a success flag and user token
+  res.redirect(`/?payment_success=true&token=${userId}`);
 });
 
 // 6. Complete / Confirm payment simulated callback

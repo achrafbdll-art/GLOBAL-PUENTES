@@ -1,7 +1,7 @@
 export const translations = {
   fr: {
     // Nav & Common
-    brandName: "GLOBAL PUENTES",
+    brandName: "ENWII",
     navHome: "Accueil",
     navAbout: "À Propos",
     navServices: "Services",
@@ -163,7 +163,7 @@ export const translations = {
     footerServicesTitle: "Domaines d'Intervention",
     footerOfficeTitle: "Bureau International",
     footerOfficeAddr: "Downtown Boulevard, Al-Shammari Tower\nÉmirats Arabes Unis (EAU) & Bureau International",
-    footerRights: "Global Puentes. Tous droits réservés. Cabinet de Conseil d'Affaires International.",
+    footerRights: "ENWII. Tous droits réservés. Cabinet de Conseil d'Affaires International.",
     footerTerms: "Conditions Générales",
     footerPrivacy: "Politique de Confidentialité",
 
@@ -178,7 +178,7 @@ export const translations = {
     loginRegisterLink: "Créer un profil de membre d'affaires",
 
     registerTitle: "Création de Profil Membre",
-    registerSubtitle: "Adhésion au Cabinet Global Puentes",
+    registerSubtitle: "Adhésion au Cabinet ENWII",
     registerLabelName: "Nom complet du représentant d'affaires",
     registerLabelEmail: "Email d'affaires sécurisé",
     registerLabelPassword: "Mot de passe (8 caractères min)",
@@ -189,7 +189,7 @@ export const translations = {
   },
   es: {
     // Nav & Common
-    brandName: "GLOBAL PUENTES",
+    brandName: "ENWII",
     navHome: "Inicio",
     navAbout: "Sobre Al-Shammari",
     navServices: "Servicios",
@@ -351,7 +351,7 @@ export const translations = {
     footerServicesTitle: "Áreas de Intervención",
     footerOfficeTitle: "Oficina Internacional",
     footerOfficeAddr: "Downtown Boulevard, Al-Shammari Tower\nEmiratos Árabes Unidos (EAU) y Oficina Internacional",
-    footerRights: "Global Puentes. Todos los derechos reservados. Firma Internacional de Consultoría de Negocios.",
+    footerRights: "ENWII. Todos los derechos reservados. Firma Internacional de Consultoría de Negocios.",
     footerTerms: "Términos y Condiciones",
     footerPrivacy: "Política de Privacidad",
 
@@ -366,7 +366,7 @@ export const translations = {
     loginRegisterLink: "Crear perfil de miembro comercial",
 
     registerTitle: "Crear Perfil de Miembro",
-    registerSubtitle: "Membresía de la Firma Global Puentes",
+    registerSubtitle: "Membresía de la Firma ENWII",
     registerLabelName: "Nombre completo del representante comercial",
     registerLabelEmail: "Correo electrónico comercial seguro",
     registerLabelPassword: "Contraseña (mínimo 8 caracteres)",
@@ -377,7 +377,7 @@ export const translations = {
   },
   ar: {
     // Nav & Common
-    brandName: "GLOBAL PUENTES",
+    brandName: "ENWII",
     navHome: "الرئيسية",
     navAbout: "من نحن",
     navServices: "الخدمات",
@@ -539,7 +539,7 @@ export const translations = {
     footerServicesTitle: "مجالات التدخل",
     footerOfficeTitle: "المكتب الدولي",
     footerOfficeAddr: "بوليفارد وسط المدينة، برج الشمري\nالإمارات العربية المتحدة والمكتب الدولي",
-    footerRights: "غلوبال بوينتس. جميع الحقوق محفوظة. مكتب استشارات الأعمال الدولية.",
+    footerRights: "ENWII. جميع الحقوق محفوظة. مكتب استشارات الأعمال الدولية.",
     footerTerms: "الشروط العامة",
     footerPrivacy: "سياسة الخصوصية",
 
@@ -554,7 +554,7 @@ export const translations = {
     loginRegisterLink: "إنشاء ملف عضوية أعمال",
 
     registerTitle: "إنشاء حساب عضوية",
-    registerSubtitle: "الانضمام إلى مكتب غلوبال بوينتس للأعمال",
+    registerSubtitle: "الانضمام إلى مكتب ENWII للأعمال",
     registerLabelName: "الاسم الكامل لممثل الأعمال",
     registerLabelEmail: "البريد الإلكتروني للأعمال الآمن",
     registerLabelPassword: "كلمة المرور (8 رموز على الأقل)",

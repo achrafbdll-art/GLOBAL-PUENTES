@@ -303,7 +303,53 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
       <div className="absolute bottom-0 right-10 w-[500px] h-[500px] bg-[#D4AF37]/2 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        {/* Luxury Ornate Gold Frame */}
+        <div className="relative p-6 sm:p-10 md:p-16 border border-[#D4AF37]/50 rounded-2xl bg-[#060606]/95 shadow-lg shadow-[#D4AF37]/10 shadow-[0_0_60px_rgba(212,175,55,0.08),inset_0_0_40px_rgba(212,175,55,0.04)] overflow-hidden">
+          {/* Luxury Inner double frame border */}
+          <div className="absolute inset-2 border border-[#D4AF37]/15 rounded-xl pointer-events-none" />
+          
+          {/* Ornate Traditional Moroccan Star Corners */}
+          {/* Top-Left Corner */}
+          <div className="absolute top-4 left-4 w-8 h-8 pointer-events-none flex items-center justify-center text-[#D4AF37] z-10">
+            <svg viewBox="0 0 100 100" className="w-5 h-5 fill-current opacity-85">
+              <path d="M 50 15 L 58 35 L 78 28 L 68 45 L 85 50 L 68 55 L 78 72 L 58 65 L 50 85 L 42 65 L 22 72 L 32 55 L 15 50 L 32 45 L 22 28 L 42 35 Z" />
+              <circle cx="50" cy="50" r="10" fill="none" stroke="#050505" strokeWidth="4" />
+            </svg>
+          </div>
+          <div className="absolute top-0 left-0 w-10 h-10 border-t-2 border-l-2 border-[#D4AF37] rounded-tl-2xl pointer-events-none" />
+
+          {/* Top-Right Corner */}
+          <div className="absolute top-4 right-4 w-8 h-8 pointer-events-none flex items-center justify-center text-[#D4AF37] z-10">
+            <svg viewBox="0 0 100 100" className="w-5 h-5 fill-current opacity-85">
+              <path d="M 50 15 L 58 35 L 78 28 L 68 45 L 85 50 L 68 55 L 78 72 L 58 65 L 50 85 L 42 65 L 22 72 L 32 55 L 15 50 L 32 45 L 22 28 L 42 35 Z" />
+              <circle cx="50" cy="50" r="10" fill="none" stroke="#050505" strokeWidth="4" />
+            </svg>
+          </div>
+          <div className="absolute top-0 right-0 w-10 h-10 border-t-2 border-r-2 border-[#D4AF37] rounded-tr-2xl pointer-events-none" />
+
+          {/* Bottom-Left Corner */}
+          <div className="absolute bottom-4 left-4 w-8 h-8 pointer-events-none flex items-center justify-center text-[#D4AF37] z-10">
+            <svg viewBox="0 0 100 100" className="w-5 h-5 fill-current opacity-85">
+              <path d="M 50 15 L 58 35 L 78 28 L 68 45 L 85 50 L 68 55 L 78 72 L 58 65 L 50 85 L 42 65 L 22 72 L 32 55 L 15 50 L 32 45 L 22 28 L 42 35 Z" />
+              <circle cx="50" cy="50" r="10" fill="none" stroke="#050505" strokeWidth="4" />
+            </svg>
+          </div>
+          <div className="absolute bottom-0 left-0 w-10 h-10 border-b-2 border-l-2 border-[#D4AF37] rounded-bl-2xl pointer-events-none" />
+
+          {/* Bottom-Right Corner */}
+          <div className="absolute bottom-4 right-4 w-8 h-8 pointer-events-none flex items-center justify-center text-[#D4AF37] z-10">
+            <svg viewBox="0 0 100 100" className="w-5 h-5 fill-current opacity-85">
+              <path d="M 50 15 L 58 35 L 78 28 L 68 45 L 85 50 L 68 55 L 78 72 L 58 65 L 50 85 L 42 65 L 22 72 L 32 55 L 15 50 L 32 45 L 22 28 L 42 35 Z" />
+              <circle cx="50" cy="50" r="10" fill="none" stroke="#050505" strokeWidth="4" />
+            </svg>
+          </div>
+          <div className="absolute bottom-0 right-0 w-10 h-10 border-b-2 border-r-2 border-[#D4AF37] rounded-br-2xl pointer-events-none" />
+          
+          {/* Subtle slow spinning ambient glow light behind corners or borders */}
+          <div className="absolute -top-12 -left-12 w-32 h-32 bg-[#D4AF37]/10 rounded-full blur-2xl pointer-events-none animate-pulse" />
+          <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-[#D4AF37]/10 rounded-full blur-2xl pointer-events-none animate-pulse" />
+
+          <div className="text-center mb-16 relative z-10">
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#D4AF37] font-sans-ui">
             {activeLangData.sectionBadge}
           </span>
@@ -407,6 +453,8 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
             <span>{activeLangData.ctaBtn}</span>
             <ArrowRight className="w-4 h-4 text-black rtl:rotate-180" />
           </button>
+        </div>
+        {/* End of Luxury Ornate Gold Frame */}
         </div>
       </div>
     </section>

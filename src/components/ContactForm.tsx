@@ -123,7 +123,7 @@ export default function ContactForm() {
                   <div>
                     <h4 className="text-neutral-300 font-bold text-xs uppercase tracking-wider font-sans-ui">Courriel Général</h4>
                     <p className="text-[#F5E6D3]/60 text-xs mt-1 font-serif">
-                      office@globalpuentes.com
+                      office@enwii.com
                     </p>
                   </div>
                 </div>

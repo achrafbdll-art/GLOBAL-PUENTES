@@ -165,6 +165,14 @@ export default function StripeSimulation({
               Vos informations d'authentification bancaire sont chiffrées de bout en bout et transmises directement au réseau interbancaire de compensation.
             </div>
           </div>
+
+          <div className="p-4 rounded-xl border border-[#d4af37]/20 bg-[#d4af37]/3 flex items-start space-x-3 text-xs text-neutral-300 leading-relaxed font-light">
+            <Shield className="w-4 h-4 text-[#d4af37] flex-shrink-0 mt-0.5" />
+            <div>
+              <span className="font-bold text-[#d4af37] uppercase tracking-wider block mb-0.5">Lancement GitHub 100% Réel :</span>
+              Ce projet intègre nativement la double-passerelle Stripe. Renseignez la clé <code className="font-mono text-[10px] bg-neutral-900 px-1 py-0.5 text-white rounded">STRIPE_SECRET_KEY</code> dans votre fichier <code className="font-mono text-[10px] bg-neutral-900 px-1 py-0.5 text-white rounded">.env</code> pour que le système bascule automatiquement sur de véritables formulaires et sessions Stripe Checkout sécurisés.
+            </div>
+          </div>
         </div>
 
         {/* Right Side: Interactive Card Form (7 cols) */}
@@ -314,7 +322,7 @@ export default function StripeSimulation({
               <div className="space-y-2">
                 <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Accès Membre Activé !</h3>
                 <p className="text-xs text-neutral-400 font-light max-w-sm mx-auto leading-relaxed">
-                  Votre versement de <span className="text-[#d4af37] font-bold">${paymentAmount}</span> a été validé par la banque. Vous disposez désormais de l'accréditation d'expertise Global Puentes.
+                  Votre versement de <span className="text-[#d4af37] font-bold">${paymentAmount}</span> a été validé par la banque. Vous disposez désormais de l'accréditation d'expertise ENWII.
                 </p>
               </div>
 
