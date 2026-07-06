@@ -32,25 +32,25 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
   const photos = [
     {
       src: eeeImage,
-      src: "/src/assets/images/eee.webp",
+
       title: "Dubai — Global Business Hub",
       tag: "Dubai"
     },
     {
       src: cargoShipImage,
-      src: "/src/assets/images/cargo_ship_trade_1783282445365.jpg",
+
       title: "Logistics & Global Trade Finance",
       tag: "Logistics"
     },
     {
       src: genevaImage,
-      src: "/src/assets/images/geneva_wealth_room_1783282456159.jpg",
+
       title: "Geneva — Private Wealth Management",
       tag: "Geneva"
     },
     {
       src: executiveImage,
-      src: "/src/assets/images/executive_negotiation_1783282468019.jpg",
+
       title: "Elite Structuring & Negotiations",
       tag: "Executive"
     }
@@ -65,7 +65,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
       <div className="absolute inset-0 z-0">
         <img
           src={heroBackgroundImage}
-          src="/src/assets/images/hero_background_1783280300050.jpg"
+
           alt="Chiaroscuro Gold Luxury Background"
           className="w-full h-full object-cover opacity-20 filter brightness-[0.35] contrast-[1.15]"
           referrerPolicy="no-referrer"
@@ -164,7 +164,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
               <div className="relative w-full h-full overflow-hidden border border-[#D4AF37]/15 rounded-xs">
                 <img
                   src={portraitImage}
-                  src="/src/assets/images/al_shammari_portrait_1783283014114.jpg"
+
                   alt="GLOBAL-PUENTE Business Expert"
                   className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-105"
                   referrerPolicy="no-referrer"
