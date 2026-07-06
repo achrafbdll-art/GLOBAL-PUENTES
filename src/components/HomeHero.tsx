@@ -29,7 +29,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
       tag: "Dubai"
     },
     {
-      src: "/src/assets/images/cargo_ship_trade_1783282445365.jpg",
+      src: "/src/assets/images/eee.webp",
       title: "Logistics & Global Trade Finance",
       tag: "Logistics"
     },
