@@ -1,9 +1,10 @@
-import { Route, User } from "../types";
-import { ArrowRight, Sparkles, Globe, ShieldCheck } from "lucide-react";
-import { motion } from "motion/react";
-import { useLanguage } from "../LanguageContext";
-import FlagAnimation3D from "./FlagAnimation3D";
-
+// Import images directly to ensure they're bundled correctly
+import eeeImage from "../assets/images/eee.webp";
+import cargoShipImage from "../assets/images/cargo_ship_trade_1783282445365.jpg";
+import genevaImage from "../assets/images/geneva_wealth_room_1783282456159.jpg";
+import executiveImage from "../assets/images/executive_negotiation_1783282468019.jpg";
+import heroBackgroundImage from "../assets/images/hero_background_1783280300050.jpg";
+import portraitImage from "../assets/images/al_shammari_portrait_1783283014114.jpg";
 interface HomeHeroProps {
   setCurrentRoute: (route: Route) => void;
   user: User | null;
