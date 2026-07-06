@@ -19,29 +19,43 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
 
   // Correction des chemins pour qu'ils soient relatifs au dossier public ou gérés par le bundler
   // Note: En React/Vite, les images dans src/assets doivent être importées ou appelées via des chemins relatifs corrects
-  const photos = [
-    {
-      src: "src/assets/images/eee.webp",
-      title: "Dubai — Global Business Hub",
-      tag: "Dubai"
-    },
-    {
-      src: "src/assets/images/cargo_ship_trade_1783282445365.jpg",
-      title: "Logistics & Global Trade Finance",
-      tag: "Logistics"
-    },
-    {
-      src: "src/assets/images/geneva_wealth_room_1783282456159.jpg",
-      title: "Geneva — Private Wealth Management",
-      tag: "Geneva"
-    },
-    {
-      src: "src/assets/images/executive_negotiation_1783282468019.jpg",
-      title: "Elite Structuring & Negotiations",
-      tag: "Executive"
-    }
-  ];
+// Remplacez simplement la liste des photos par celle-ci :
+const photos = [
+  {
+    src: "/images/eee.webp",
+    title: "Dubai — Global Business Hub",
+    tag: "Dubai"
+  },
+  {
+    src: "/images/cargo_ship_trade_1783282445365.jpg",
+    title: "Logistics & Global Trade Finance",
+    tag: "Logistics"
+  },
+  {
+    src: "/images/geneva_wealth_room_1783282456159.jpg",
+    title: "Geneva — Private Wealth Management",
+    tag: "Geneva"
+  },
+  {
+    src: "/images/executive_negotiation_1783282468019.jpg",
+    title: "Elite Structuring & Negotiations",
+    tag: "Executive"
+  }
+];
 
+// Et pour l'image de fond (Background) :
+<img
+  src="/images/hero_background_1783280300050.jpg"
+  alt="Background"
+  // ... gardez le reste du code identique
+/>
+
+// Et pour le portrait :
+<img
+  src="/images/al_shammari_portrait_1783283014114.jpg"
+  alt="Portrait"
+  // ... gardez le reste du code identique
+/>
   const scrollingPhotos = [...photos, ...photos, ...photos, ...photos];
 
   return (
