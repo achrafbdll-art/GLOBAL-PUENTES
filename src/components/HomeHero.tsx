@@ -42,6 +42,26 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
       src: "/src/assets/images/executive_negotiation_1783282468019.jpg",
       title: "Elite Structuring & Negotiations",
       tag: "Executive"
+    },
+    {
+      src: "/src/assets/images/diplomatic_handshake_meeting.webp",
+      title: "High-Level Diplomatic Negotiations",
+      tag: "Diplomacy"
+    },
+    {
+      src: "/src/assets/images/europe_expansion_advisor.webp",
+      title: "European Expansion & Legal Structuring",
+      tag: "Europe"
+    },
+    {
+      src: "/src/assets/images/spain_coverage_map.webp",
+      title: "Spain — Gateway to the European Market",
+      tag: "Spain"
+    },
+    {
+      src: "/src/assets/images/mena_corridor_map.webp",
+      title: "MENA — Strategic Regional Corridor",
+      tag: "MENA"
     }
   ];
 
