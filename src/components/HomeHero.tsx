@@ -6,7 +6,7 @@ import FlagAnimation3D from "./FlagAnimation3D";
 
 // Import images directly to ensure they're bundled correctly
 import eeeImage from "../assets/images/eee.webp";
-import cargoShipImage from "../assets/images/cargo_ship_trade_1783282445365.jpg";
+import cargoShipImage from "../assets/images/eee.webp";
 import genevaImage from "../assets/images/geneva_wealth_room_1783282456159.jpg";
 import executiveImage from "../assets/images/executive_negotiation_1783282468019.jpg";
 import heroBackgroundImage from "../assets/images/hero_background_1783280300050.jpg";
