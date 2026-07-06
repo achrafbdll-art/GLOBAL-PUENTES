@@ -11,7 +11,6 @@ import genevaImage from "../assets/images/geneva_wealth_room_1783282456159.jpg";
 import executiveImage from "../assets/images/executive_negotiation_1783282468019.jpg";
 import heroBackgroundImage from "../assets/images/hero_background_1783280300050.jpg";
 import portraitImage from "../assets/images/al_shammari_portrait_1783283014114.jpg";
-
 interface HomeHeroProps {
   setCurrentRoute: (route: Route) => void;
   user: User | null;
@@ -33,21 +32,25 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
   const photos = [
     {
       src: eeeImage,
+      src: "/src/assets/images/eee.webp",
       title: "Dubai — Global Business Hub",
       tag: "Dubai"
     },
     {
       src: cargoShipImage,
+      src: "/src/assets/images/cargo_ship_trade_1783282445365.jpg",
       title: "Logistics & Global Trade Finance",
       tag: "Logistics"
     },
     {
       src: genevaImage,
+      src: "/src/assets/images/geneva_wealth_room_1783282456159.jpg",
       title: "Geneva — Private Wealth Management",
       tag: "Geneva"
     },
     {
       src: executiveImage,
+      src: "/src/assets/images/executive_negotiation_1783282468019.jpg",
       title: "Elite Structuring & Negotiations",
       tag: "Executive"
     }
@@ -62,6 +65,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
       <div className="absolute inset-0 z-0">
         <img
           src={heroBackgroundImage}
+          src="/src/assets/images/hero_background_1783280300050.jpg"
           alt="Chiaroscuro Gold Luxury Background"
           className="w-full h-full object-cover opacity-20 filter brightness-[0.35] contrast-[1.15]"
           referrerPolicy="no-referrer"
@@ -79,7 +83,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
       {/* Main Content (Flex-Grow to keep centered) */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex-grow flex flex-col justify-center w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
-          
+
           {/* Left Column: Core Text content & CTA buttons */}
           <div className="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start justify-center">
             {/* Upper Accent Tag */}
@@ -160,14 +164,15 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
               <div className="relative w-full h-full overflow-hidden border border-[#D4AF37]/15 rounded-xs">
                 <img
                   src={portraitImage}
+                  src="/src/assets/images/al_shammari_portrait_1783283014114.jpg"
                   alt="GLOBAL-PUENTE Business Expert"
                   className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
-                
+
                 {/* Subtle Luxury Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                
+
                 {/* Gold Crest watermark in top-right */}
                 <div className="absolute top-4 right-4 w-10 h-10 bg-black/60 rounded-full border border-[#D4AF37]/35 flex items-center justify-center pointer-events-none backdrop-blur-xs">
                   <svg className="w-6 h-6 text-[#D4AF37]/80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -202,7 +207,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
               </div>
             </motion.div>
           </div>
-          
+
         </div>
 
         {/* Trust Indicators */}
@@ -257,7 +262,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-90" />
-              
+
               {/* Caption Tag */}
               <div className="absolute top-2.5 left-2.5 bg-black/85 border border-[#D4AF37]/35 text-[#D4AF37] px-2 py-0.5 text-[8px] uppercase tracking-widest font-sans-ui font-bold">
                 {photo.tag}
