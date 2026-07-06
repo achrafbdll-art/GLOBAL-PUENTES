@@ -17,7 +17,8 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
     }
   };
 
-const photos = [
+const photos = [import eeeImage from "../assets/images/eee.webp";
+src: {eeeImage}
   {
     src: "/images/eee.webp",
     title: "Dubai — Global Business Hub",
