@@ -17,9 +17,6 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
     }
   };
 
-  // Correction des chemins pour qu'ils soient relatifs au dossier public ou gérés par le bundler
-  // Note: En React/Vite, les images dans src/assets doivent être importées ou appelées via des chemins relatifs corrects
-// Remplacez simplement la liste des photos par celle-ci :
 const photos = [
   {
     src: "/images/eee.webp",
