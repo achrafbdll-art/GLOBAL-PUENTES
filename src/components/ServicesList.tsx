@@ -30,7 +30,7 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
       deliverablesLabel: "Livrables de l'Expert :",
       learnMore: "En savoir plus",
       ctaTitle: "Besoin d'un diagnostic d'affaires sur-mesure ?",
-      ctaDesc: "Accédez à notre espace membre exclusif pour soumettre votre dossier d'affaires directement à l'expert Al-Shammari et programmer votre session d'audit stratégique privée.",
+      ctaDesc: "Accédez à notre espace membre exclusif pour soumettre votre dossier d'affaires directement à l'expert GLOBAL-PUENTE et programmer votre session d'audit stratégique privée.",
       ctaBtn: "Débloquer l'Accès",
       list: [
         {
@@ -89,7 +89,7 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
           icon: Shuffle,
           title: "Négociation & Représentation d'Affaires",
           tagline: "Influence et arbitrages stratégiques",
-          description: "Défense exclusive de vos intérêts lors de négociations transactionnelles complexes. Al-Shammari intervient personnellement comme intermédiaire neutre ou représentant engagé pour débloquer des transactions majeures.",
+          description: "Défense exclusive de vos intérêts lors de négociations transactionnelles complexes. GLOBAL-PUENTE intervient personnellement comme intermédiaire neutre ou représentant engagé pour débloquer des transactions majeures.",
           details: [
             "Représentation exclusive lors d'arbitrages de conflits d'associés",
             "Négociation d'achats ou ventes d'actifs corporatifs majeurs",
@@ -102,7 +102,7 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
           icon: HelpCircle,
           title: "Mentorat de Direction & Consultations",
           tagline: "Clarté décisionnelle absolue",
-          description: "Un accès direct et régulier aux conseils stratégiques d'Al-Shammari. Séance intensive de cadrage de 90 minutes ou suivi mensuel sur-mesure pour optimiser vos performances et accélérer votre leadership.",
+          description: "Un accès direct et régulier aux conseils stratégiques de GLOBAL-PUENTE. Séance intensive de cadrage de 90 minutes ou suivi mensuel sur-mesure pour optimiser vos performances et accélérer votre leadership.",
           details: [
             "Séance de diagnostic critique et revue de plan stratégique",
             "Simulation de pitchs d'investissements et plans de financement",
@@ -120,7 +120,7 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
       deliverablesLabel: "Resultados del Experto:",
       learnMore: "Saber más",
       ctaTitle: "¿Necesita un diagnóstico empresarial a medida?",
-      ctaDesc: "Acceda a nuestra área exclusiva de miembros para enviar su expediente comercial directamente al experto Al-Shammari y programar su sesión de auditoría estratégica privada.",
+      ctaDesc: "Acceda a nuestra área exclusiva de miembros para enviar su expediente comercial directamente al experto GLOBAL-PUENTE y programar su sesión de auditoría estratégica privada.",
       ctaBtn: "Desbloquear Acceso",
       list: [
         {
@@ -179,7 +179,7 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
           icon: Shuffle,
           title: "Negociación y Representación Comercial",
           tagline: "Influencia y arbitraje estratégico",
-          description: "Defensa exclusiva de sus intereses durante negociaciones transaccionales complejas. Al-Shammari interviene personalmente como intermediario neutral o representante comprometido para desbloquear transacciones importantes.",
+          description: "Defensa exclusiva de sus intereses durante negociaciones transaccionales complejas. GLOBAL-PUENTE interviene personalmente como intermediario neutral o representante comprometido para desbloquear transacciones importantes.",
           details: [
             "Representación exclusiva en arbitrajes de disputas de socios",
             "Negociación de compras o ventas de activos corporativos importantes",
@@ -192,7 +192,7 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
           icon: HelpCircle,
           title: "Mentoría Ejecutiva y Consultas",
           tagline: "Claridad de decisión absoluta",
-          description: "Acceso directo y regular a la asesoría estratégica de Al-Shammari. Sesión intensiva de diagnóstico de 90 minutos o seguimiento mensual a medida para optimizar su desempeño y acelerar su liderazgo.",
+          description: "Acceso directo y regular a la asesoría estratégica de GLOBAL-PUENTE. Sesión intensiva de diagnóstico de 90 minutos o seguimiento mensual a medida para optimizar su desempeño y acelerar su liderazgo.",
           details: [
             "Sesión de diagnóstico crítico y revisión de planes estratégicos",
             "Simulación de pitches de inversión y planes de financiación",
@@ -210,7 +210,7 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
       deliverablesLabel: "مخرجات الخبير:",
       learnMore: "معرفة المزيد",
       ctaTitle: "هل تحتاج إلى تشخيص أعمال مخصص؟",
-      ctaDesc: "ادخل إلى منطقة الأعضاء الحصرية لتقديم ملف عملك مباشرة إلى الخبير الشمري وتحديد موعد جلسة التدقيق الاستراتيجي الخاصة بك.",
+      ctaDesc: "ادخل إلى منطقة الأعضاء الحصرية لتقديم ملف عملك مباشرة إلى الخبير GLOBAL-PUENTE وتحديد موعد جلسة التدقيق الاستراتيجي الخاصة بك.",
       ctaBtn: "فتح إمكانية الوصول",
       list: [
         {
@@ -269,7 +269,7 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
           icon: Shuffle,
           title: "التفاوض والتمثيل التجاري للأعمال",
           tagline: "التأثير والوساطة والتحكيم الاستراتيجي",
-          description: "الدفاع الحصري عن مصالحك خلال المفاوضات التجارية المعقدة وعالية الأهمية. يتدخل الشمري شخصياً كوسيط محايد أو ممثل لشركتك لإتمام الصفقات الكبرى وتجاوز العقبات.",
+          description: "الدفاع الحصري عن مصالحك خلال المفاوضات التجارية المعقدة وعالية الأهمية. يتدخل GLOBAL-PUENTE شخصياً كوسيط محايد أو ممثل لشركتك لإتمام الصفقات الكبرى وتجاوز العقبات.",
           details: [
             "التمثيل الحصري أثناء التحكيم في نزاعات الشركاء",
             "التفاوض لشراء أو بيع الأصول المؤسسية والشركات الكبرى",
@@ -282,7 +282,7 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
           icon: HelpCircle,
           title: "التوجيه التنفيذي واستشارات القيادة",
           tagline: "وضوح وصنع القرار المطلق",
-          description: "الوصول المباشر والمنتظم للاستشارات الاستراتيجية للخبير الشمري. جلسة تشخيص مكثفة لمدة 90 دقيقة أو متابعة شهرية مخصصة لتحسين أدائك الريادي والقيادي.",
+          description: "الوصول المباشر والمنتظم للاستشارات الاستراتيجية للخبير GLOBAL-PUENTE. جلسة تشخيص مكثفة لمدة 90 دقيقة أو متابعة شهرية مخصصة لتحسين أدائك الريادي والقيادي.",
           details: [
             "جلسة تشخيص نقدي ومراجعة الخطة الاستراتيجية للشركة",
             "محاكاة عروض الاستثمار ومراجعة خطط التمويل",

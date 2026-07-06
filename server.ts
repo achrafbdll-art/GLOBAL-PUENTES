@@ -15,6 +15,40 @@ if (stripeSecretKey) {
   console.log("[Server] No STRIPE_SECRET_KEY found. Running in hybrid simulator mode.");
 }
 
+// Initialize PayPal configuration
+const PAYPAL_CLIENT_ID = process.env.PAYPAL_CLIENT_ID || "";
+const PAYPAL_CLIENT_SECRET = process.env.PAYPAL_CLIENT_SECRET || "";
+const PAYPAL_MODE = process.env.PAYPAL_MODE || "sandbox"; // sandbox or live
+const isPayPalConfigured = !!(PAYPAL_CLIENT_ID && PAYPAL_CLIENT_SECRET);
+const PAYPAL_API_URL = PAYPAL_MODE === "live"
+  ? "https://api-m.paypal.com"
+  : "https://api-m.sandbox.paypal.com";
+
+if (isPayPalConfigured) {
+  console.log(`[Server] PayPal initialized successfully in [${PAYPAL_MODE}] mode.`);
+} else {
+  console.log("[Server] No PayPal credentials found. Running in hybrid simulator mode.");
+}
+
+async function getPayPalAccessToken() {
+  const auth = Buffer.from(`${PAYPAL_CLIENT_ID}:${PAYPAL_CLIENT_SECRET}`).toString("base64");
+  const response = await fetch(`${PAYPAL_API_URL}/v1/oauth2/token`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Basic ${auth}`,
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: "grant_type=client_credentials"
+  });
+
+  if (!response.ok) {
+    throw new Error("Impossible de s'authentifier auprès de PayPal.");
+  }
+
+  const data: any = await response.json();
+  return data.access_token;
+}
+
 const app = express();
 const PORT = 3000;
 
@@ -30,8 +64,8 @@ function loadDb() {
       users: [
         {
           id: "admin-1",
-          email: "admin@enwii.com",
-          fullName: "Admin ENWII",
+          email: "admin@global-puente.com",
+          fullName: "Admin GLOBAL-PUENTE",
           role: "admin",
           membershipStatus: "active",
           createdAt: new Date().toISOString(),
@@ -203,7 +237,7 @@ app.post("/api/payment/create-checkout-session", async (req, res) => {
             price_data: {
               currency: "usd",
               product_data: {
-                name: "Accompagnement d'Expertise d'Élite ENWII",
+                name: "Accompagnement d'Expertise d'Élite GLOBAL-PUENTE",
                 description: "Accès à l'espace membre d'affaires et planification de consultations privées.",
               },
               unit_amount: amount * 100, // Stripe expects cents
@@ -276,6 +310,143 @@ app.get("/api/payment/success", async (req, res) => {
 
   // Redirect back to frontend, passing a success flag and user token
   res.redirect(`/?payment_success=true&token=${userId}`);
+});
+
+// 5c. Create PayPal Order
+app.post("/api/payment/create-paypal-order", async (req, res) => {
+  const user = getAuthenticatedUser(req);
+  if (!user) {
+    res.status(401).json({ error: "Authentification requise pour initier un paiement." });
+    return;
+  }
+
+  const amount = Number(req.body.amount) || 50;
+  if (amount < 50) {
+    res.status(400).json({ error: "Le montant minimum est de 50$." });
+    return;
+  }
+
+  // Set user state to pending payment
+  const db = loadDb();
+  const userIdx = db.users.findIndex((u: any) => u.id === user.id);
+  if (userIdx !== -1) {
+    db.users[userIdx].membershipStatus = "pending_payment";
+    saveDb(db);
+  }
+
+  if (isPayPalConfigured) {
+    try {
+      const accessToken = await getPayPalAccessToken();
+      const baseUrl = process.env.APP_URL || "http://localhost:3000";
+      
+      const response = await fetch(`${PAYPAL_API_URL}/v2/checkout/orders`, {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${accessToken}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          intent: "CAPTURE",
+          purchase_units: [
+            {
+              amount: {
+                currency_code: "USD",
+                value: amount.toString()
+              },
+              description: "Accompagnement d'Expertise d'Élite GLOBAL-PUENTE"
+            }
+          ],
+          application_context: {
+            brand_name: "GLOBAL-PUENTE",
+            landing_page: "BILLING",
+            user_action: "PAY_NOW",
+            return_url: `${baseUrl}/?payment_success=true&token=${user.id}`,
+            cancel_url: `${baseUrl}/pricing`
+          }
+        })
+      });
+
+      if (!response.ok) {
+        const errorDetail = await response.text();
+        throw new Error(`PayPal Order creation failed: ${errorDetail}`);
+      }
+
+      const orderData: any = await response.json();
+      const approvalLink = orderData.links.find((l: any) => l.rel === "approve" || l.rel === "payer-action")?.href;
+
+      res.status(200).json({
+        success: true,
+        isRealPayPal: true,
+        orderId: orderData.id,
+        checkoutUrl: approvalLink || `https://www.paypal.com/checkoutnow?token=${orderData.id}`
+      });
+      return;
+    } catch (err: any) {
+      console.error("[Server] Error creating PayPal Order:", err.message);
+      // Fallback to simulator if error occurs
+    }
+  }
+
+  // Hybrid Local Simulator Fallback
+  res.status(200).json({
+    success: true,
+    isRealPayPal: false,
+    orderId: "pp_order_" + Math.random().toString(36).substring(2, 11),
+    checkoutUrl: `/payment?amount=${amount}&gateway=paypal&orderId=pp_order_` + Math.random().toString(36).substring(2, 11)
+  });
+});
+
+// 5d. Capture PayPal Order
+app.post("/api/payment/capture-paypal-order", async (req, res) => {
+  const user = getAuthenticatedUser(req);
+  if (!user) {
+    res.status(401).json({ error: "Authentification requise." });
+    return;
+  }
+
+  const { orderId, amount } = req.body;
+  const paymentAmount = Number(amount) || 150;
+
+  if (isPayPalConfigured && orderId && !orderId.startsWith("pp_order_")) {
+    try {
+      const accessToken = await getPayPalAccessToken();
+      const response = await fetch(`${PAYPAL_API_URL}/v2/checkout/orders/${orderId}/capture`, {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${accessToken}`,
+          "Content-Type": "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        const errorDetail = await response.text();
+        throw new Error(`PayPal Capture failed: ${errorDetail}`);
+      }
+
+      const captureData: any = await response.json();
+      if (captureData.status !== "COMPLETED") {
+        res.status(400).json({ error: "La transaction PayPal n'a pas pu être complétée." });
+        return;
+      }
+    } catch (err: any) {
+      console.error("[Server] Error capturing PayPal Order:", err.message);
+      res.status(500).json({ error: err.message || "Erreur de capture PayPal." });
+      return;
+    }
+  }
+
+  // Update membership status in DB
+  const db = loadDb();
+  const userIdx = db.users.findIndex((u: any) => u.id === user.id);
+  if (userIdx !== -1) {
+    db.users[userIdx].membershipStatus = "active";
+    db.users[userIdx].paidAmount = paymentAmount;
+    db.users[userIdx].paymentDate = new Date().toISOString();
+    saveDb(db);
+    res.status(200).json({ success: true, user: db.users[userIdx] });
+  } else {
+    res.status(404).json({ error: "Utilisateur non trouvé" });
+  }
 });
 
 // 6. Complete / Confirm payment simulated callback

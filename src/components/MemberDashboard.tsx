@@ -17,6 +17,7 @@ import {
   UserCheck
 } from "lucide-react";
 import { motion } from "motion/react";
+import { safeJson } from "../utils";
 
 interface MemberDashboardProps {
   user: User | null;
@@ -59,7 +60,7 @@ export default function MemberDashboard({ user, setCurrentRoute }: MemberDashboa
           "Authorization": `Bearer ${user.id}`
         }
       });
-      const data = await res.json();
+      const data = await safeJson(res);
       if (res.ok) {
         setConsultations(data.consultations || []);
       }
@@ -94,7 +95,7 @@ export default function MemberDashboard({ user, setCurrentRoute }: MemberDashboa
         })
       });
 
-      const data = await res.json();
+      const data = await safeJson(res);
       if (!res.ok) {
         throw new Error(data.error || "Échec de l'enregistrement de la consultation.");
       }
@@ -202,7 +203,7 @@ export default function MemberDashboard({ user, setCurrentRoute }: MemberDashboa
           <Lock className="w-12 h-12 text-[#D4AF37] mx-auto mb-5" />
           <h3 className="text-xl font-bold text-white uppercase tracking-tight font-serif italic">Accès Privé Restreint</h3>
           <p className="text-[#F5E6D3]/60 text-xs sm:text-sm font-serif italic mt-3 leading-relaxed">
-            Cet espace exclusif regroupe nos simulateurs d'affaires, nos manuels stratégiques, et l'agenda d'Al-Shammari. Un abonnement d'expertise actif est requis.
+            Cet espace exclusif regroupe nos simulateurs d'affaires, nos manuels stratégiques, et l'agenda de GLOBAL-PUENTE. Un abonnement d'expertise actif est requis.
           </p>
           <button
             onClick={() => setCurrentRoute("pricing")}
@@ -233,7 +234,7 @@ export default function MemberDashboard({ user, setCurrentRoute }: MemberDashboa
                 {user.paidAmount && <span className="text-[10px] text-neutral-500 font-mono">Contribution: ${user.paidAmount}</span>}
               </div>
               <h2 className="text-xl sm:text-2xl font-bold text-white uppercase tracking-tight font-serif italic">{user.fullName}</h2>
-              <p className="text-xs text-[#F5E6D3]/60 font-serif italic">Espace d'accompagnement de direction d'affaires - ENWII</p>
+              <p className="text-xs text-[#F5E6D3]/60 font-serif italic">Espace d'accompagnement de direction d'affaires - GLOBAL-PUENTE</p>
             </div>
           </div>
 
@@ -483,7 +484,7 @@ export default function MemberDashboard({ user, setCurrentRoute }: MemberDashboa
                     <div className="pt-2">
                       <div className="flex items-center space-x-1 text-[#D4AF37] text-xs font-bold uppercase tracking-wider mb-2 font-sans-ui">
                         <Sparkles className="w-4 h-4 text-[#D4AF37]" />
-                        <span>Recommandations d'Al-Shammari :</span>
+                        <span>Recommandations de GLOBAL-PUENTE :</span>
                       </div>
                       <ul className="space-y-2.5">
                         {calcResult.recommendations.map((rec, rIdx) => (
@@ -541,7 +542,7 @@ export default function MemberDashboard({ user, setCurrentRoute }: MemberDashboa
                     <CheckCircle className="w-12 h-12 text-[#D4AF37] mx-auto" />
                     <h4 className="text-white font-bold text-sm uppercase font-serif italic">Demande Enregistrée</h4>
                     <p className="text-xs text-[#F5E6D3]/70 leading-relaxed font-serif italic">
-                      Votre dossier a été transmis personnellement à l'expert Al-Shammari. Notre cabinet de secrétariat d'affaires vous contactera sous 24 heures pour convenir de l'heure exacte et vous envoyer l'invitation vidéo sécurisée.
+                      Votre dossier a été transmis personnellement à l'expert GLOBAL-PUENTE. Notre cabinet de secrétariat d'affaires vous contactera sous 24 heures pour convenir de l'heure exacte et vous envoyer l'invitation vidéo sécurisée.
                     </p>
                     <button
                       onClick={() => setSchedulingStatus('idle')}
@@ -674,7 +675,7 @@ export default function MemberDashboard({ user, setCurrentRoute }: MemberDashboa
                     <Calendar className="w-12 h-12 text-[#D4AF37]/20 mx-auto" />
                     <p className="text-xs text-[#F5E6D3]/60 font-bold uppercase tracking-widest font-sans-ui">Aucune demande planifiée</p>
                     <p className="text-[11px] text-neutral-600 max-w-xs mx-auto leading-relaxed font-serif italic">
-                      Planifiez votre première consultation avec Al-Shammari en remplissant le dossier d'affaires à gauche.
+                      Planifiez votre première consultation avec GLOBAL-PUENTE en remplissant le dossier d'affaires à gauche.
                     </p>
                   </div>
                 )}
@@ -692,7 +693,7 @@ export default function MemberDashboard({ user, setCurrentRoute }: MemberDashboa
                   <span>Matériels Stratégiques & Documents</span>
                 </h3>
                 <p className="text-xs text-[#F5E6D3]/60 font-serif italic mt-1">
-                  Accédez en libre téléchargement aux guides juridiques exclusifs et aux ressources financières édités par l'équipe d'Al-Shammari.
+                  Accédez en libre téléchargement aux guides juridiques exclusifs et aux ressources financières édités par l'équipe de GLOBAL-PUENTE.
                 </p>
               </div>
 

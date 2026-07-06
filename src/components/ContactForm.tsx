@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, RefreshCw } from "lucide-react";
 import { motion } from "motion/react";
+import { safeJson } from "../utils";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -39,7 +40,7 @@ export default function ContactForm() {
         body: JSON.stringify(formData)
       });
 
-      const data = await res.json();
+      const data = await safeJson(res);
       if (!res.ok) {
         throw new Error(data.error || "Une erreur s'est produite lors de la transmission.");
       }
@@ -62,10 +63,53 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-24 bg-[#050505]/80 backdrop-blur-xs relative overflow-hidden">
-      <div className="absolute inset-y-0 right-0 w-1/3 bg-[#D4AF37]/1 rounded-full blur-[100px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-[#050505] relative overflow-hidden">
+      {/* Luminous Gold Background Motif */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
+        {/* Golden radial glow emitters */}
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#D4AF37]/5 rounded-full blur-[120px] mix-blend-screen opacity-60" />
+        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-[#8B7355]/4 rounded-full blur-[140px] mix-blend-screen opacity-40" />
+        
+        {/* Subtle geometric & pattern motif overlay */}
+        <svg className="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="contact-fine-grid" width="80" height="80" patternUnits="userSpaceOnUse">
+              <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#D4AF37" strokeWidth="0.5" strokeOpacity="0.25" />
+              <circle cx="0" cy="0" r="1.5" fill="#D4AF37" fillOpacity="0.5" />
+            </pattern>
+          </defs>
+          
+          {/* Base Grid */}
+          <rect width="100%" height="100%" fill="url(#contact-fine-grid)" />
+          
+          {/* Sacred geometry circular motif on the left */}
+          <g transform="translate(180, 250)" stroke="#D4AF37" strokeWidth="0.75" fill="none">
+            <circle cx="0" cy="0" r="140" strokeDasharray="3 6" />
+            <circle cx="0" cy="0" r="90" />
+            <circle cx="0" cy="0" r="45" strokeDasharray="1 3" />
+            <line x1="-180" y1="0" x2="180" y2="0" strokeOpacity="0.4" />
+            <line x1="0" y1="-180" x2="0" y2="180" strokeOpacity="0.4" />
+            <polygon points="0,-90 90,0 0,90 -90,0" strokeOpacity="0.2" />
+            <circle cx="0" cy="-90" r="3" fill="#D4AF37" />
+            <circle cx="90" cy="0" r="3" fill="#D4AF37" />
+            <circle cx="0" cy="90" r="3" fill="#D4AF37" />
+            <circle cx="-90" cy="0" r="3" fill="#D4AF37" />
+          </g>
+          
+          {/* Sacred geometry compass motif on the right */}
+          <g transform="translate(85%, 65%)" stroke="#D4AF37" strokeWidth="0.75" fill="none">
+            <circle cx="0" cy="0" r="200" />
+            <circle cx="0" cy="0" r="130" strokeDasharray="4 8" />
+            <circle cx="0" cy="0" r="70" />
+            <line x1="-240" y1="0" x2="240" y2="0" strokeOpacity="0.3" strokeDasharray="2 2" />
+            <line x1="0" y1="-240" x2="0" y2="240" strokeOpacity="0.3" strokeDasharray="2 2" />
+            <polygon points="0,-130 91.9,-91.9 130,0 91.9,91.9 0,130 -91.9,91.9 -130,0 -91.9,-91.9" strokeOpacity="0.15" />
+            <circle cx="0" cy="0" r="4" fill="#D4AF37" />
+          </g>
+        </svg>
+      </div>
+ 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#D4AF37] font-sans-ui">
             Entrer en relation
@@ -98,7 +142,7 @@ export default function ContactForm() {
                   <div>
                     <h4 className="text-neutral-300 font-bold text-xs uppercase tracking-wider font-sans-ui">Adresse Principale</h4>
                     <p className="text-[#F5E6D3]/60 text-xs mt-1 leading-relaxed font-serif">
-                      Downtown Boulevard, Al-Shammari Tower<br />
+                      Downtown Boulevard, GLOBAL-PUENTE Tower<br />
                       Émirats Arabes Unis (EAU)
                     </p>
                   </div>
@@ -123,7 +167,7 @@ export default function ContactForm() {
                   <div>
                     <h4 className="text-neutral-300 font-bold text-xs uppercase tracking-wider font-sans-ui">Courriel Général</h4>
                     <p className="text-[#F5E6D3]/60 text-xs mt-1 font-serif">
-                      office@enwii.com
+                      office@global-puente.com
                     </p>
                   </div>
                 </div>
@@ -147,7 +191,7 @@ export default function ContactForm() {
                 <CheckCircle2 className="w-16 h-16 text-[#D4AF37] mb-6" />
                 <h3 className="text-2xl font-bold text-white mb-2 uppercase tracking-tight font-serif">Transmission Réussie</h3>
                 <p className="text-[#F5E6D3]/70 text-xs sm:text-sm font-serif italic max-w-md mb-8 leading-relaxed">
-                  Votre message stratégique a été chiffré et consigné en toute sécurité. L'expert Al-Shammari ou l'un de ses associés prendra contact avec vous sous 24 à 48 heures ouvrées.
+                  Votre message stratégique a été chiffré et consigné en toute sécurité. L'expert GLOBAL-PUENTE ou l'un de ses associés prendra contact avec vous sous 24 à 48 heures ouvrées.
                 </p>
                 <button
                   id="btn-contact-reset"

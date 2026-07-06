@@ -3,7 +3,7 @@ import { Route, User } from "./types";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomeHero from "./components/HomeHero";
-import AboutAlShammari from "./components/AboutAlShammari";
+import AboutGlobalPuente from "./components/AboutGlobalPuente";
 import ServicesList from "./components/ServicesList";
 import TestimonialsList from "./components/TestimonialsList";
 import ContactForm from "./components/ContactForm";
@@ -15,6 +15,7 @@ import LoginView from "./components/LoginView";
 import RegisterView from "./components/RegisterView";
 import { Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { safeJson } from "./utils";
 
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState<Route>("home");
@@ -29,17 +30,17 @@ export default function App() {
     const paymentSuccess = urlParams.get("payment_success");
     const paymentToken = urlParams.get("token");
 
-    let initialToken = localStorage.getItem("enwii_token");
+    let initialToken = localStorage.getItem("global_puente_token");
 
     if (paymentSuccess === "true" && paymentToken) {
-      localStorage.setItem("enwii_token", paymentToken);
+      localStorage.setItem("global_puente_token", paymentToken);
       initialToken = paymentToken;
       // Clean up the URL query parameters so the address bar looks clean and polished
       window.history.replaceState({}, document.title, window.location.pathname);
     }
 
     const verifySession = async () => {
-      const storedToken = initialToken || localStorage.getItem("enwii_token");
+      const storedToken = initialToken || localStorage.getItem("global_puente_token");
       if (!storedToken) {
         setCheckingSession(false);
         return;
@@ -51,7 +52,7 @@ export default function App() {
             "Authorization": `Bearer ${storedToken}`
           }
         });
-        const data = await res.json();
+        const data = await safeJson(res);
         if (res.ok) {
           setUser(data.user);
           // If user paid and is active, direct them straight to the private dashboard
@@ -60,7 +61,7 @@ export default function App() {
           }
         } else {
           // Token stale
-          localStorage.removeItem("enwii_token");
+          localStorage.removeItem("global_puente_token");
         }
       } catch (err) {
         console.error("Session verification failed:", err);
@@ -73,7 +74,7 @@ export default function App() {
   }, []);
 
   const handleLoginSuccess = (loggedInUser: User, token: string) => {
-    localStorage.setItem("enwii_token", token);
+    localStorage.setItem("global_puente_token", token);
     setUser(loggedInUser);
 
     // Check if there was an intended payment amount prior to logging in
@@ -99,7 +100,7 @@ export default function App() {
   };
 
   const handleRegisterSuccess = (newUser: User, token: string) => {
-    localStorage.setItem("enwii_token", token);
+    localStorage.setItem("global_puente_token", token);
     setUser(newUser);
 
     const intended = localStorage.getItem("intended_payment_amount");
@@ -113,7 +114,7 @@ export default function App() {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("enwii_token");
+    localStorage.removeItem("global_puente_token");
     setUser(null);
     setCurrentRoute("home");
   };
@@ -160,7 +161,7 @@ export default function App() {
               <>
                 <HomeHero setCurrentRoute={setCurrentRoute} user={user} />
                 <div id="about-section">
-                  <AboutAlShammari />
+                  <AboutGlobalPuente />
                 </div>
                 <div id="services-section">
                   <ServicesList setCurrentRoute={setCurrentRoute} />
@@ -173,7 +174,7 @@ export default function App() {
             {/* ABOUT VIEW (Direct link from header or hero) */}
             {currentRoute === "about" && (
               <>
-                <AboutAlShammari />
+                <AboutGlobalPuente />
                 <ContactForm />
               </>
             )}

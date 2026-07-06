@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route } from "../types";
 import { LogIn, Mail, Lock, User as UserIcon, RefreshCw, AlertCircle } from "lucide-react";
 import { motion } from "motion/react";
+import { safeJson } from "../utils";
 
 interface RegisterViewProps {
   setCurrentRoute: (route: Route) => void;
@@ -32,7 +33,7 @@ export default function RegisterView({ setCurrentRoute, onRegisterSuccess }: Reg
         body: JSON.stringify({ fullName, email, password })
       });
 
-      const data = await res.json();
+      const data = await safeJson(res);
       if (!res.ok) {
         throw new Error(data.error || "Une erreur s'est produite lors de la création.");
       }
@@ -56,7 +57,7 @@ export default function RegisterView({ setCurrentRoute, onRegisterSuccess }: Reg
           <div className="text-center space-y-1">
             <span className="text-[10px] uppercase tracking-[0.2em] text-[#D4AF37] font-bold font-sans-ui">Inscription</span>
             <h2 className="text-2xl font-bold text-white uppercase tracking-tight font-serif italic">Nouvel Espace</h2>
-            <p className="text-xs text-[#F5E6D3]/60 font-serif italic">Cabinet d'Affaires International ENWII</p>
+            <p className="text-xs text-[#F5E6D3]/60 font-serif italic">Cabinet d'Affaires International GLOBAL-PUENTE</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">

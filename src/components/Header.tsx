@@ -58,7 +58,7 @@ export default function Header({ currentRoute, setCurrentRoute, user, onLogout }
           <div className="flex items-center space-x-6">
             <span className="hidden sm:inline-flex items-center space-x-1.5 text-neutral-500 font-serif lowercase tracking-normal italic text-[11px]">
               <Mail className="w-3.5 h-3.5 text-[#D4AF37]/75" />
-              <span>contact@enwii.com</span>
+              <span>contact@global-puente.com</span>
             </span>
             
             {/* Elegant Circular Language Badge Selectors (Matching FR | GB | MA style) */}
@@ -129,7 +129,7 @@ export default function Header({ currentRoute, setCurrentRoute, user, onLogout }
                   {t("brandName")}
                 </span>
                 <span className="text-[7px] text-[#D4AF37]/70 tracking-[0.45em] uppercase font-sans-ui font-extrabold -mt-1">
-                  AL-SHAMMARI
+                  GLOBAL-PUENTE
                 </span>
               </div>
             </div>

@@ -2,7 +2,7 @@ import { Briefcase, Landmark, Globe, Trophy, ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../LanguageContext";
 
-export default function AboutAlShammari() {
+export default function AboutGlobalPuente() {
   const { t } = useLanguage();
 
   const stats = [
@@ -31,17 +31,55 @@ export default function AboutAlShammari() {
   ];
 
   return (
-    <section className="py-24 bg-[#0a0a0a]/80 backdrop-blur-xs border-y border-[#D4AF37]/10 relative overflow-hidden">
-      {/* Visual Accents */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[400px] h-[400px] bg-[#D4AF37]/3 rounded-full blur-[100px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-[#0a0a0a] border-y border-[#D4AF37]/10 relative overflow-hidden">
+      {/* Luminous Gold Background Motif */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
+        {/* Golden radial glow emitters */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[550px] h-[550px] bg-[#D4AF37]/4 rounded-full blur-[130px] mix-blend-screen opacity-50" />
+        <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-[#8B7355]/3 rounded-full blur-[110px] mix-blend-screen opacity-30" />
+        
+        {/* Subtle geometric & pattern motif overlay */}
+        <svg className="absolute inset-0 w-full h-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="about-fine-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#D4AF37" strokeWidth="0.5" strokeOpacity="0.2" />
+              <circle cx="0" cy="0" r="1.2" fill="#D4AF37" fillOpacity="0.4" />
+            </pattern>
+          </defs>
+          
+          {/* Base Grid */}
+          <rect width="100%" height="100%" fill="url(#about-fine-grid)" />
+          
+          {/* Constellation or network links representing global bridges */}
+          <g transform="translate(100, 100)" stroke="#D4AF37" strokeWidth="0.75" fill="none">
+            <circle cx="0" cy="0" r="150" />
+            <circle cx="0" cy="0" r="80" strokeDasharray="2 4" />
+            <line x1="-200" y1="0" x2="200" y2="0" strokeOpacity="0.3" />
+            <line x1="0" y1="-200" x2="0" y2="200" strokeOpacity="0.3" />
+            <path d="M-106,106 Q0,0 106,-106" strokeOpacity="0.2" />
+            <path d="M-106,-106 Q0,0 106,106" strokeOpacity="0.2" />
+          </g>
+          
+          {/* Abstract concentric orbital rings in bottom right */}
+          <g transform="translate(90%, 80%)" stroke="#D4AF37" strokeWidth="0.75" fill="none">
+            <circle cx="0" cy="0" r="220" strokeDasharray="3 6" />
+            <circle cx="0" cy="0" r="160" />
+            <circle cx="0" cy="0" r="100" strokeDasharray="1 3" />
+            <circle cx="0" cy="0" r="40" />
+            <line x1="-300" y1="0" x2="300" y2="0" strokeOpacity="0.2" />
+            <line x1="0" y1="-300" x2="0" y2="300" strokeOpacity="0.2" />
+            <polygon points="0,-160 113.1,-113.1 160,0 113.1,113.1 0,160 -113.1,113.1 -160,0 -113.1,-113.1" strokeOpacity="0.1" />
+          </g>
+        </svg>
+      </div>
+ 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#D4AF37] font-sans-ui">
             {t("aboutFounder")}
           </span>
           <h2 className="text-4xl sm:text-5xl font-black text-white mt-2 uppercase tracking-tight italic font-serif">
-            AL-SHAMMARI
+            GLOBAL-PUENTE
           </h2>
           <div className="w-16 h-[1px] bg-[#D4AF37]/40 mx-auto mt-4" />
           <p className="max-w-2xl mx-auto text-[#F5E6D3]/60 mt-4 text-xs sm:text-sm font-serif italic leading-relaxed">
@@ -67,7 +105,7 @@ export default function AboutAlShammari() {
               <div className="relative overflow-hidden aspect-square bg-[#0a0a0a]">
                 <img
                   src="/src/assets/images/advisor_portrait_1783280314130.jpg"
-                  alt="Conseiller Al-Shammari"
+                  alt="Conseiller GLOBAL-PUENTE"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                   referrerPolicy="no-referrer"
                 />
@@ -75,7 +113,7 @@ export default function AboutAlShammari() {
               </div>
               
               <div className="mt-4 text-center pb-2">
-                <h4 className="text-[#D4AF37] font-bold text-lg tracking-wider uppercase font-serif italic">Al-Shammari</h4>
+                <h4 className="text-[#D4AF37] font-bold text-lg tracking-wider uppercase font-serif italic">GLOBAL-PUENTE</h4>
                 <p className="text-neutral-500 text-[10px] uppercase tracking-widest mt-0.5 font-sans-ui font-bold">{t("aboutRole")}</p>
               </div>
             </motion.div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { User, ContactMessage, ConsultationRequest } from "../types";
 import { ShieldCheck, Mail, Users, Calendar, Clock, RefreshCw, AlertCircle, Coins } from "lucide-react";
 import { motion } from "motion/react";
+import { safeJson } from "../utils";
 
 interface AdminPanelProps {
   user: User | null;
@@ -26,19 +27,19 @@ export default function AdminPanel({ user }: AdminPanelProps) {
       const mRes = await fetch("/api/admin/messages", {
         headers: { "Authorization": `Bearer ${user.id}` }
       });
-      const mData = await mRes.json();
+      const mData = await safeJson(mRes);
 
       // 2. Fetch users
       const uRes = await fetch("/api/admin/users", {
         headers: { "Authorization": `Bearer ${user.id}` }
       });
-      const uData = await uRes.json();
+      const uData = await safeJson(uRes);
 
       // 3. Fetch consultations
       const cRes = await fetch("/api/member/consultations", {
         headers: { "Authorization": `Bearer ${user.id}` }
       });
-      const cData = await cRes.json();
+      const cData = await safeJson(cRes);
 
       if (mRes.ok && uRes.ok && cRes.ok) {
         setMessages(mData.messages || []);
@@ -66,7 +67,7 @@ export default function AdminPanel({ user }: AdminPanelProps) {
           <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
           <h3 className="text-xl font-bold uppercase tracking-tight">Accès Administrateur Refusé</h3>
           <p className="text-xs font-light mt-3 leading-relaxed">
-            Seuls les profils d'administration du cabinet d'affaires ENWII sont autorisés à visualiser les fichiers clients et correspondances reçues.
+            Seuls les profils d'administration du cabinet d'affaires GLOBAL-PUENTE sont autorisés à visualiser les fichiers clients et correspondances reçues.
           </p>
         </div>
       </div>

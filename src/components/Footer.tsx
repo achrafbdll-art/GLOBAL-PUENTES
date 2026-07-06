@@ -12,11 +12,11 @@ export default function Footer({ setCurrentRoute }: FooterProps) {
 
   const footerTranslations = {
     fr: {
-      brandDesc: "L'excellence du conseil stratégique international par Al-Shammari. Création d'entreprises, diversification d'investissements et structuration de réseaux mondiaux d'import-export.",
+      brandDesc: "L'excellence du conseil stratégique international par GLOBAL-PUENTE. Création d'entreprises, diversification d'investissements et structuration de réseaux mondiaux d'import-export.",
       brandTagline: "Expertise d'Élite internationale",
       navHeader: "Navigation",
       navHome: "Accueil",
-      navAbout: "À Propos d'Al-Shammari",
+      navAbout: "À Propos de GLOBAL-PUENTE",
       navServices: "Nos Services",
       navPricing: "Tarifs & Expertise",
       focusHeader: "Domaines d'Intervention",
@@ -25,18 +25,18 @@ export default function Footer({ setCurrentRoute }: FooterProps) {
       focusItem3: "Réseaux Logistiques Import-Export",
       focusItem4: "Mentorat Privé & Négociation",
       officeHeader: "Bureau International",
-      officeAddress: "Downtown Boulevard, Al-Shammari Tower, Émirats Arabes Unis (EAU) & Bureau International",
-      copyright: "ENWII. Tous droits réservés. Cabinet de Conseil d'Affaires International.",
+      officeAddress: "Downtown Boulevard, GLOBAL-PUENTE Tower, Émirats Arabes Unis (EAU) & Bureau International",
+      copyright: "GLOBAL-PUENTE. Tous droits réservés. Cabinet de Conseil d'Affaires International.",
       stripeLabel: "Paiements Chiffrés SSL - Stripe",
       terms: "Conditions Générales",
       privacy: "Politique de Confidentialité"
     },
     es: {
-      brandDesc: "La excelencia de la consultoría estratégica internacional por Al-Shammari. Creación de empresas, diversificación de inversiones y estructuración de redes globales de importación y exportación.",
+      brandDesc: "La excelencia de la consultoría estratégica internacional por GLOBAL-PUENTE. Creación de empresas, diversificación de inversiones y estructuración de redes globales de importación y exportación.",
       brandTagline: "Experiencia de Élite Internacional",
       navHeader: "Navegación",
       navHome: "Inicio",
-      navAbout: "Sobre Al-Shammari",
+      navAbout: "Sobre GLOBAL-PUENTE",
       navServices: "Nuestros Servicios",
       navPricing: "Tarifas y Experiencia",
       focusHeader: "Áreas de Intervención",
@@ -45,14 +45,14 @@ export default function Footer({ setCurrentRoute }: FooterProps) {
       focusItem3: "Redes Logísticas de Importación y Exportación",
       focusItem4: "Mentoría Privada y Negociación",
       officeHeader: "Oficina Internacional",
-      officeAddress: "Downtown Boulevard, Al-Shammari Tower, Emiratos Árabes Unidos (EAU) y Oficina Internacional",
-      copyright: "ENWII. Todos los derechos reservados. Consultoría de Negocios Internacionales.",
+      officeAddress: "Downtown Boulevard, GLOBAL-PUENTE Tower, Emiratos Árabes Unidos (EAU) y Oficina Internacional",
+      copyright: "GLOBAL-PUENTE. Todos los derechos reservados. Consultoría de Negocios Internacionales.",
       stripeLabel: "Pagos Encriptados SSL - Stripe",
       terms: "Términos y Condiciones",
       privacy: "Política de Privacidad"
     },
     ar: {
-      brandDesc: "التميز في الاستشارات الاستراتيجية الدولية على يد الخبير الشمري. تأسيس الشركات، تنويع الاستثمارات، وهيكلة الشبكات العالمية للاستيراد والتصدير.",
+      brandDesc: "التميز في الاستشارات الاستراتيجية الدولية على يد الخبير GLOBAL-PUENTE. تأسيس الشركات، تنويع الاستثمارات، وهيكلة الشبكات العالمية للاستيراد والتصدير.",
       brandTagline: "نخبة الخبرة الدولية",
       navHeader: "التنقل",
       navHome: "الرئيسية",
@@ -65,8 +65,8 @@ export default function Footer({ setCurrentRoute }: FooterProps) {
       focusItem3: "الشبكات اللوجستية والاستيراد والتصدير",
       focusItem4: "التوجيه الخاص والمفاوضات",
       officeHeader: "المكتب الدولي",
-      officeAddress: "داون تاون بوليفارد، برج الشمري، الإمارات العربية المتحدة والمكتب الدولي",
-      copyright: "ENWII. جميع الحقوق محفوظة. مكتب الاستشارات التجارية الدولية.",
+      officeAddress: "داون تاون بوليفارد، برج GLOBAL-PUENTE، الإمارات العربية المتحدة والمكتب الدولي",
+      copyright: "GLOBAL-PUENTE. جميع الحقوق محفوظة. مكتب الاستشارات التجارية الدولية.",
       stripeLabel: "مدفوعات مشفرة آمنة SSL - سترايب",
       terms: "الشروط والأحكام",
       privacy: "سياسة الخصوصية"
@@ -161,7 +161,7 @@ export default function Footer({ setCurrentRoute }: FooterProps) {
               </li>
               <li className="flex items-center space-x-2.5">
                 <Mail className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
-                <span>office@enwii.com</span>
+                <span>office@global-puente.com</span>
               </li>
             </ul>
           </div>

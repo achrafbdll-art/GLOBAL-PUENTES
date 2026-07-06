@@ -1,7 +1,7 @@
 export const translations = {
   fr: {
     // Nav & Common
-    brandName: "ENWII",
+    brandName: "GLOBAL-PUENTE",
     navHome: "Accueil",
     navAbout: "À Propos",
     navServices: "Services",
@@ -18,7 +18,7 @@ export const translations = {
     heroSubtitleUpper: "International Business Consulting",
     heroTitleUpper: "Expertise",
     heroTitleLower: "Business",
-    heroDesc: "Transformez votre vision entrepreneuriale en réalité avec l'accompagnement d'un expert international certifié. Bénéficiez d'une structuration d'élite en création d'entreprise, investissements internationaux et logistique commerciale par l'expert d'affaires Al-Shammari.",
+    heroDesc: "Transformez votre vision entrepreneuriale en réalité avec l'accompagnement d'un expert international certifié. Bénéficiez d'une structuration d'élite en création d'entreprise, investissements internationaux et logistique commerciale par l'expert d'affaires GLOBAL-PUENTE.",
     heroCtaMember: "Accéder à l'Espace Membre",
     heroCtaUnlock: "Débloquer l'Expertise",
     heroCtaDiscover: "Découvrir l'Expert",
@@ -30,7 +30,7 @@ export const translations = {
     aboutFounder: "L'Expert Fondateur",
     aboutTitleUpper: "Une Vision Globale,",
     aboutTitleLower: "Une Exécution d'Élite",
-    aboutDesc: "Après deux décennies passées à piloter des opérations commerciales à fort enjeu et à structurer des montages transfrontaliers à Dubaï, Genève et Singapour, Al-Shammari propose un accompagnement sans concession. Son approche allie rigueur analytique, relations d'affaires directes et réactivité immédiate.",
+    aboutDesc: "Après deux décennies passées à piloter des opérations commerciales à fort enjeu et à structurer des montages transfrontaliers à Dubaï, Genève et Singapour, GLOBAL-PUENTE propose un accompagnement sans concession. Son approche allie rigueur analytique, relations d'affaires directes et réactivité immédiate.",
     aboutQuote: "Dans l'économie contemporaine, les frontières géographiques ne sont plus des limites, mais des opportunités de pivotement stratégique. L'important est de posséder le bon réseau d'accès.",
     aboutRole: "Conseiller en Investissement & Négoce",
     aboutIntroText: "Découvrez le parcours de l'architecte d'affaires qui transforme les barrières locales en passerelles de croissance internationales.",
@@ -58,7 +58,7 @@ export const translations = {
     // Testimonials
     testimonialsSectionTitle: "Témoignages de Prestige",
     testimonialsSectionSubtitle: "Recommandations Clients",
-    testimonialsIntroText: "Découvrez les retours de grands décideurs, industriels et investisseurs privés qui s'appuient au quotidien sur l'expertise d'Al-Shammari.",
+    testimonialsIntroText: "Découvrez les retours de grands décideurs, industriels et investisseurs privés qui s'appuient au quotidien sur l'expertise de GLOBAL-PUENTE.",
 
     // Contact Form
     contactTitle: "Entretien Stratégique",
@@ -72,7 +72,7 @@ export const translations = {
     contactBtnSubmitting: "Transmission cryptée...",
     contactBtnSubmit: "Initier le contact sécurisé",
     contactSuccessTitle: "Message Transmis avec Succès",
-    contactSuccessDesc: "Votre dossier confidentiel a été chiffré et envoyé à notre bureau stratégique. Al-Shammari ou son directeur de cabinet vous répondra sous 24h.",
+    contactSuccessDesc: "Votre dossier confidentiel a été chiffré et envoyé à notre bureau stratégique. GLOBAL-PUENTE ou son directeur de cabinet vous répondra sous 24h.",
     contactBtnNew: "Nouveau message",
 
     // Pricing
@@ -107,7 +107,7 @@ export const translations = {
     memberTabLibrary: "Bibliothèque",
     
     calcTitle: "Simulateur de Faisabilité de Projet",
-    calcDesc: "Évaluez la viabilité de vos projets d'affaires internationaux (offshore, import-export, expansion) grâce aux critères pondérés d'Al-Shammari.",
+    calcDesc: "Évaluez la viabilité de vos projets d'affaires internationaux (offshore, import-export, expansion) grâce aux critères pondérés de GLOBAL-PUENTE.",
     calcMarketDemand: "Attractivité du Marché Cible",
     calcMarketDesc: "Pénétration, concurrence locale et dynamique de croissance.",
     calcFinancialFeasibility: "Équilibre Financier & Marges",
@@ -124,7 +124,7 @@ export const translations = {
     calcScoreFinancial: "Équilibre Financier",
     calcScoreOperational: "Capacité Opérationnelle",
     calcScoreRegulatory: "Clarté Réglementaire",
-    calcRecsTitle: "Recommandations d'Al-Shammari :",
+    calcRecsTitle: "Recommandations de GLOBAL-PUENTE :",
     calcDocId: "Dossier analytique n°GP-CALC-",
     calcVersion: "Calculateur v2.4",
     calcPendingTitle: "Simulateur en attente",
@@ -134,7 +134,7 @@ export const translations = {
     scheduleTitle: "Planifier une Consultation",
     scheduleDesc: "Soumettez un dossier stratégique pour programmer une séance de conseil d'affaires exclusive en 1-à-1 de 90 minutes.",
     scheduleSuccessTitle: "Demande Enregistrée",
-    scheduleSuccessDesc: "Votre dossier a été transmis personnellement à l'expert Al-Shammari. Notre cabinet de secrétariat d'affaires vous contactera sous 24 heures pour convenir de l'heure exacte et vous envoyer l'invitation vidéo sécurisée.",
+    scheduleSuccessDesc: "Votre dossier a été transmis personnellement à l'expert GLOBAL-PUENTE. Notre cabinet de secrétariat d'affaires vous contactera sous 24 heures pour convenir de l'heure exacte et vous envoyer l'invitation vidéo sécurisée.",
     scheduleBtnAnother: "Planifier une autre session",
     scheduleLabelTopic: "Sujet de la consultation",
     scheduleLabelDate: "Date préférentielle",
@@ -144,26 +144,26 @@ export const translations = {
     scheduleBtnSubmit: "Soumettre mon dossier",
     scheduleHistoryTitle: "Historique des Sessions de Consultation",
     scheduleHistoryEmptyTitle: "Aucune demande planifiée",
-    scheduleHistoryEmptyDesc: "Planifiez votre première consultation avec Al-Shammari en remplissant le dossier d'affaires à gauche.",
+    scheduleHistoryEmptyDesc: "Planifiez votre première consultation avec GLOBAL-PUENTE en remplissant le dossier d'affaires à gauche.",
     scheduleHistoryTheme: "Thème retenu",
     scheduleHistoryStatusPending: "En attente",
     scheduleHistoryStatusConfirmed: "Confirmé",
 
     // Library
     libraryTitle: "Matériels Stratégiques & Documents",
-    libraryDesc: "Accédez en libre téléchargement aux guides juridiques exclusifs et aux ressources financières édités par l'équipe d'Al-Shammari.",
+    libraryDesc: "Accédez en libre téléchargement aux guides juridiques exclusifs et aux ressources financières édités par l'équipe de GLOBAL-PUENTE.",
     libraryDocPrivate: "Document Privé",
     libraryBtnDownload: "Télécharger",
     librarySecureNote: "L'intégralité des documents téléchargés depuis cette bibliothèque comporte un tatouage numérique invisible (watermark) propre à votre compte pour empêcher toute redistribution publique illégale de la propriété intellectuelle du cabinet.",
 
     // Footer
-    footerDesc: "L'excellence du conseil stratégique international par Al-Shammari. Création d'entreprises, diversification d'investissements et structuration de réseaux mondiaux d'import-export.",
+    footerDesc: "L'excellence du conseil stratégique international par GLOBAL-PUENTE. Création d'entreprises, diversification d'investissements et structuration de réseaux mondiaux d'import-export.",
     footerElite: "Expertise d'Élite internationale",
     footerNavTitle: "Navigation",
     footerServicesTitle: "Domaines d'Intervention",
     footerOfficeTitle: "Bureau International",
-    footerOfficeAddr: "Downtown Boulevard, Al-Shammari Tower\nÉmirats Arabes Unis (EAU) & Bureau International",
-    footerRights: "ENWII. Tous droits réservés. Cabinet de Conseil d'Affaires International.",
+    footerOfficeAddr: "Downtown Boulevard, GLOBAL-PUENTE Tower\nÉmirats Arabes Unis (EAU) & Bureau International",
+    footerRights: "GLOBAL-PUENTE. Tous droits réservés. Cabinet de Conseil d'Affaires International.",
     footerTerms: "Conditions Générales",
     footerPrivacy: "Politique de Confidentialité",
 
@@ -178,7 +178,7 @@ export const translations = {
     loginRegisterLink: "Créer un profil de membre d'affaires",
 
     registerTitle: "Création de Profil Membre",
-    registerSubtitle: "Adhésion au Cabinet ENWII",
+    registerSubtitle: "Adhésion au Cabinet GLOBAL-PUENTE",
     registerLabelName: "Nom complet du représentant d'affaires",
     registerLabelEmail: "Email d'affaires sécurisé",
     registerLabelPassword: "Mot de passe (8 caractères min)",
@@ -189,9 +189,9 @@ export const translations = {
   },
   es: {
     // Nav & Common
-    brandName: "ENWII",
+    brandName: "GLOBAL-PUENTE",
     navHome: "Inicio",
-    navAbout: "Sobre Al-Shammari",
+    navAbout: "Sobre GLOBAL-PUENTE",
     navServices: "Servicios",
     navPricing: "Tarifas",
     navLogin: "Iniciar Sesión",
@@ -206,7 +206,7 @@ export const translations = {
     heroSubtitleUpper: "Consultoría de Negocios Internacionales",
     heroTitleUpper: "Pericia",
     heroTitleLower: "Negocios",
-    heroDesc: "Transforme su visión empresarial en realidad con el acompañamiento de un experto internacional certificado. Benefíciese de una estructuración de élite en creación de empresas, inversiones internacionales y logística comercial por el experto en negocios Al-Shammari.",
+    heroDesc: "Transforme su visión empresarial en realidad con el acompañamiento de un experto internacional certificado. Benefíciese de una estructuración de élite en creación de empresas, inversiones internacionales y logística comercial por el experto en negocios GLOBAL-PUENTE.",
     heroCtaMember: "Acceder al Área de Miembros",
     heroCtaUnlock: "Desbloquear Experiencia",
     heroCtaDiscover: "Descubrir al Experto",
@@ -218,7 +218,7 @@ export const translations = {
     aboutFounder: "El Experto Fundador",
     aboutTitleUpper: "Una Visión Global,",
     aboutTitleLower: "Una Ejecución de Élite",
-    aboutDesc: "Después de dos décadas dirigiendo operaciones comerciales de alto impacto y estructurando esquemas transfronterizos en Dubái, Ginebra y Singapur, Al-Shammari ofrece un acompañamiento sin concesiones. Su enfoque combina rigor analítico, relaciones comerciales directas y reactividad inmediata.",
+    aboutDesc: "Después de dos décadas dirigiendo operaciones comerciales de alto impacto y estructurando esquemas transfronterizos en Dubái, Ginebra y Singapur, GLOBAL-PUENTE ofrece un acompañamiento sin concesiones. Su enfoque combina rigor analítico, relaciones comerciales directas y reactividad inmediata.",
     aboutQuote: "En la economía contemporánea, las fronteras geográficas ya no son límites, sino oportunidades de pivote estratégico. Lo importante es contar con la red de acceso adecuada.",
     aboutRole: "Asesor de Inversiones y Comercio",
     aboutIntroText: "Descubra la trayectoria del arquitecto empresarial que transforma las barreras locales en puentes de crecimiento internacional.",
@@ -246,7 +246,7 @@ export const translations = {
     // Testimonials
     testimonialsSectionTitle: "Testimonios de Prestigio",
     testimonialsSectionSubtitle: "Recomendaciones de Clientes",
-    testimonialsIntroText: "Descubra las opiniones de los principales tomadores de decisiones, líderes industriales e inversores privados que confían a diario en la experiencia de Al-Shammari.",
+    testimonialsIntroText: "Descubra las opiniones de los principales tomadores de decisiones, líderes industriales e inversores privados que confían a diario en la experiencia de GLOBAL-PUENTE.",
 
     // Contact Form
     contactTitle: "Reunión Estratégica",
@@ -260,7 +260,7 @@ export const translations = {
     contactBtnSubmitting: "Transmisión cifrada...",
     contactBtnSubmit: "Iniciar contacto seguro",
     contactSuccessTitle: "Mensaje Enviado con Éxito",
-    contactSuccessDesc: "Su información confidencial ha sido cifrada y enviada a nuestra oficina estratégica. Al-Shammari o su director de personal responderán dentro de las 24 horas.",
+    contactSuccessDesc: "Su información confidencial ha sido cifrada y enviada a nuestra oficina estratégica. GLOBAL-PUENTE o su director de personal responderán dentro de las 24 horas.",
     contactBtnNew: "Nuevo mensaje",
 
     // Pricing
@@ -295,7 +295,7 @@ export const translations = {
     memberTabLibrary: "Biblioteca",
     
     calcTitle: "Simulador de Viabilidad de Proyectos",
-    calcDesc: "Evalúe la viabilidad de sus proyectos comerciales internacionales (offshore, importación/exportación, expansión) utilizando los criterios ponderados de Al-Shammari.",
+    calcDesc: "Evalúe la viabilidad de sus proyectos comerciales internacionales (offshore, importación/exportación, expansión) utilizando los criterios ponderados de GLOBAL-PUENTE.",
     calcMarketDemand: "Atractivo del Mercado Objetivo",
     calcMarketDesc: "Penetración, competencia local y dinámica de crecimiento.",
     calcFinancialFeasibility: "Equilibrio Financiero y Márgenes",
@@ -312,7 +312,7 @@ export const translations = {
     calcScoreFinancial: "Equilibrio Financiero",
     calcScoreOperational: "Capacidad Operativa",
     calcScoreRegulatory: "Claridad Regulatoria",
-    calcRecsTitle: "Recomendaciones de Al-Shammari:",
+    calcRecsTitle: "Recomendaciones de GLOBAL-PUENTE:",
     calcDocId: "Expediente analítico N°GP-CALC-",
     calcVersion: "Calculadora v2.4",
     calcPendingTitle: "Simulador en Espera",
@@ -322,7 +322,7 @@ export const translations = {
     scheduleTitle: "Programar una Consulta",
     scheduleDesc: "Envíe un expediente estratégico para programar una sesión de asesoría empresarial exclusiva individual de 90 minutos.",
     scheduleSuccessTitle: "Solicitud Registrada",
-    scheduleSuccessDesc: "Su expediente ha sido transmitido personalmente al experto Al-Shammari. Nuestra oficina de secretaría se pondrá en contacto con usted dentro de las 24 horas para coordinar la hora exacta y enviarle la invitación de videoconferencia segura.",
+    scheduleSuccessDesc: "Su expediente ha sido transmitido personalmente al experto GLOBAL-PUENTE. Nuestra oficina de secretaría se pondrá en contacto con usted dentro de las 24 horas para coordinar la hora exacta y enviarle la invitación de videoconferencia segura.",
     scheduleBtnAnother: "Programar otra sesión",
     scheduleLabelTopic: "Tema de la consulta",
     scheduleLabelDate: "Fecha de preferencia",
@@ -332,26 +332,26 @@ export const translations = {
     scheduleBtnSubmit: "Enviar mi expediente",
     scheduleHistoryTitle: "Historial de Sesiones de Consulta",
     scheduleHistoryEmptyTitle: "No hay citas programadas",
-    scheduleHistoryEmptyDesc: "Planifique su primera consulta con Al-Shammari completando el expediente comercial a la izquierda.",
+    scheduleHistoryEmptyDesc: "Planifique su primera consulta con GLOBAL-PUENTE completando el expediente comercial a la izquierda.",
     scheduleHistoryTheme: "Tema seleccionado",
     scheduleHistoryStatusPending: "En espera",
     scheduleHistoryStatusConfirmed: "Confirmado",
 
     // Library
     libraryTitle: "Materiales y Documentos Estratégicos",
-    libraryDesc: "Acceda a la descarga gratuita de guías legales exclusivas y recursos financieros editados por el equipo de Al-Shammari.",
+    libraryDesc: "Acceda a la descarga gratuita de guías legales exclusivas y recursos financieros editados por el equipo de GLOBAL-PUENTE.",
     libraryDocPrivate: "Documento Privado",
     libraryBtnDownload: "Descargar",
     librarySecureNote: "Todos los documentos descargados de esta biblioteca contienen una marca de agua digital invisible específica para su cuenta para evitar cualquier redistribución pública ilegal de la propiedad intelectual de la firma.",
 
     // Footer
-    footerDesc: "La excelencia de la consultoría estratégica internacional por Al-Shammari. Creación de empresas, diversificación de inversiones y estructuración de redes de importación-exportación globales.",
+    footerDesc: "La excelencia de la consultoría estratégica internacional por GLOBAL-PUENTE. Creación de empresas, diversificación de inversiones y estructuración de redes de importación-exportación globales.",
     footerElite: "Experiencia Internacional de Élite",
     footerNavTitle: "Navegación",
     footerServicesTitle: "Áreas de Intervención",
     footerOfficeTitle: "Oficina Internacional",
-    footerOfficeAddr: "Downtown Boulevard, Al-Shammari Tower\nEmiratos Árabes Unidos (EAU) y Oficina Internacional",
-    footerRights: "ENWII. Todos los derechos reservados. Firma Internacional de Consultoría de Negocios.",
+    footerOfficeAddr: "Downtown Boulevard, GLOBAL-PUENTE Tower\nEmiratos Árabes Unidos (EAU) y Oficina Internacional",
+    footerRights: "GLOBAL-PUENTE. Todos los derechos reservados. Firma Internacional de Consultoría de Negocios.",
     footerTerms: "Términos y Condiciones",
     footerPrivacy: "Política de Privacidad",
 
@@ -366,7 +366,7 @@ export const translations = {
     loginRegisterLink: "Crear perfil de miembro comercial",
 
     registerTitle: "Crear Perfil de Miembro",
-    registerSubtitle: "Membresía de la Firma ENWII",
+    registerSubtitle: "Membresía de la Firma GLOBAL-PUENTE",
     registerLabelName: "Nombre completo del representante comercial",
     registerLabelEmail: "Correo electrónico comercial seguro",
     registerLabelPassword: "Contraseña (mínimo 8 caracteres)",
@@ -377,7 +377,7 @@ export const translations = {
   },
   ar: {
     // Nav & Common
-    brandName: "ENWII",
+    brandName: "GLOBAL-PUENTE",
     navHome: "الرئيسية",
     navAbout: "من نحن",
     navServices: "الخدمات",
@@ -394,7 +394,7 @@ export const translations = {
     heroSubtitleUpper: "استشارات الأعمال الدولية",
     heroTitleUpper: "خبرة",
     heroTitleLower: "الأعمال",
-    heroDesc: "حوّل رؤيتك الريادية إلى حقيقة ملموسة بدعم من خبير دولي معتمد. استفد من هيكلة نخبوية لتأسيس الشركات، الاستثمارات الدولية والخدمات اللوجستية التجارية على يد خبير الأعمال الشمري.",
+    heroDesc: "حوّل رؤيتك الريادية إلى حقيقة ملموسة بدعم من خبير دولي معتمد. استفد من هيكلة نخبوية لتأسيس الشركات، الاستثمارات الدولية والخدمات اللوجستية التجارية على يد خبير الأعمال GLOBAL-PUENTE.",
     heroCtaMember: "دخول منطقة الأعضاء",
     heroCtaUnlock: "الحصول على الخبرة",
     heroCtaDiscover: "اكتشف الخبير",
@@ -406,7 +406,7 @@ export const translations = {
     aboutFounder: "الخبير المؤسس",
     aboutTitleUpper: "رؤية عالمية،",
     aboutTitleLower: "تنفيذ نخبوي",
-    aboutDesc: "بعد عقدين من الزمن في قيادة العمليات التجارية عالية المخاطر وهيكلة الترتيبات العابرة للحدود في دبي وجنيف وسنغافورة، يقدم الشمري مرافقة صارمة لا تهاون فيها. يجمع أسلوبه بين الدقة التحليلية، العلاقات التجارية المباشرة، والاستجابة الفورية.",
+    aboutDesc: "بعد عقدين من الزمن في قيادة العمليات التجارية عالية المخاطر وهيكلة الترتيبات العابرة للحدود في دبي وجنيف وسنغافورة، يقدم GLOBAL-PUENTE مرافقة صارمة لا تهاون فيها. يجمع أسلوبه بين الدقة التحليلية، العلاقات التجارية المباشرة، والاستجابة الفورية.",
     aboutQuote: "في الاقتصاد المعاصر، لم تعد الحدود الجغرافية عائقاً بل فرصاً للتحول الاستراتيجي. الأهم هو امتلاك شبكة الوصول المناسبة.",
     aboutRole: "مستشار الاستثمار والتجارة",
     aboutIntroText: "اكتشف مسيرة مهندس الأعمال الذي يحول الحواجز المحلية إلى جسور للنمو الدولي.",
@@ -434,7 +434,7 @@ export const translations = {
     // Testimonials
     testimonialsSectionTitle: "شهادات مرموقة",
     testimonialsSectionSubtitle: "توصيات العملاء",
-    testimonialsIntroText: "اكتشف آراء كبار صناع القرار والصناعيين والمستثمرين الخواص الذين يعتمدون يومياً على خبرة الشمري.",
+    testimonialsIntroText: "اكتشف آراء كبار صناع القرار والصناعيين والمستثمرين الخواص الذين يعتمدون يومياً على خبرة GLOBAL-PUENTE.",
 
     // Contact Form
     contactTitle: "مقابلة استراتيجية",
@@ -448,7 +448,7 @@ export const translations = {
     contactBtnSubmitting: "جاري الإرسال المشفر...",
     contactBtnSubmit: "بدء الاتصال الآمن",
     contactSuccessTitle: "تم إرسال الرسالة بنجاح",
-    contactSuccessDesc: "تم تشفير ملفك السري وإرساله إلى مكتبنا الاستراتيجي. سيرد الشمري أو مدير مكتبه عليك في غضون 24 ساعة.",
+    contactSuccessDesc: "تم تشفير ملفك السري وإرساله إلى مكتبنا الاستراتيجي. سيرد GLOBAL-PUENTE أو مدير مكتبه عليك في غضون 24 ساعة.",
     contactBtnNew: "رسالة جديدة",
 
     // Pricing
@@ -483,7 +483,7 @@ export const translations = {
     memberTabLibrary: "المكتبة",
     
     calcTitle: "جهاز محاكاة جدوى المشاريع",
-    calcDesc: "قم بتقييم مدى جدوى مشاريعك التجارية الدولية (الخارجية، الاستيراد والتصدير، التوسع) بناءً على معايير الشمري الموزونة.",
+    calcDesc: "قم بتقييم مدى جدوى مشاريعك التجارية الدولية (الخارجية، الاستيراد والتصدير، التوسع) بناءً على معايير GLOBAL-PUENTE الموزونة.",
     calcMarketDemand: "جاذبية السوق المستهدف",
     calcMarketDesc: "الانتشار، المنافسة المحلية وديناميكيات النمو.",
     calcFinancialFeasibility: "التوازن المالي والهوامش",
@@ -500,7 +500,7 @@ export const translations = {
     calcScoreFinancial: "التوازن المالي",
     calcScoreOperational: "القدرة التشغيلية",
     calcScoreRegulatory: "الوضوح التنظيمي",
-    calcRecsTitle: "توصيات الشمري :",
+    calcRecsTitle: "توصيات GLOBAL-PUENTE :",
     calcDocId: "الملف التحليلي رقم GP-CALC-",
     calcVersion: "المحاكي v2.4",
     calcPendingTitle: "المحاكي في الانتظار",
@@ -510,7 +510,7 @@ export const translations = {
     scheduleTitle: "تحديد موعد استشارة",
     scheduleDesc: "قدم ملف عمل استراتيجي لحجز جلسة استشارية حصرية ومباشرة لمدة 90 دقيقة.",
     scheduleSuccessTitle: "تم تسجيل الطلب",
-    scheduleSuccessDesc: "تم إرسال ملفك شخصياً إلى الخبير الشمري. ستتصل بك سكرتارية أعمالنا في غضون 24 ساعة لتنسيق الوقت الدقيق وإرسال دعوة الفيديو الآمنة.",
+    scheduleSuccessDesc: "تم إرسال ملفك شخصياً إلى الخبير GLOBAL-PUENTE. ستتصل بك سكرتارية أعمالنا في غضون 24 ساعة لتنسيق الوقت الدقيق وإرسال دعوة الفيديو الآمنة.",
     scheduleBtnAnother: "حجز جلسة أخرى",
     scheduleLabelTopic: "موضوع الاستشارة",
     scheduleLabelDate: "التاريخ المفضل",
@@ -520,26 +520,26 @@ export const translations = {
     scheduleBtnSubmit: "إرسال ملفي الاستراتيجي",
     scheduleHistoryTitle: "سجل جلسات الاستشارة",
     scheduleHistoryEmptyTitle: "لا توجد طلبات مجدولة",
-    scheduleHistoryEmptyDesc: "خطط لاستشارتك الأولى مع الشمري عن طريق ملء ملف الأعمال على اليسار.",
+    scheduleHistoryEmptyDesc: "خطط لاستشارتك الأولى مع GLOBAL-PUENTE عن طريق ملء ملف الأعمال على اليسار.",
     scheduleHistoryTheme: "الموضوع المعتمد",
     scheduleHistoryStatusPending: "في الانتظار",
     scheduleHistoryStatusConfirmed: "مؤكد",
 
     // Library
     libraryTitle: "المواد والوثائق الاستراتيجية",
-    libraryDesc: "احصل على تحميل مجاني للمستندات القانونية الحصرية والموارد المالية المعدة من فريق الشمري.",
+    libraryDesc: "احصل على تحميل مجاني للمستندات القانونية الحصرية والموارد المالية المعدة من فريق GLOBAL-PUENTE.",
     libraryDocPrivate: "وثيقة خاصة",
     libraryBtnDownload: "تحميل",
     librarySecureNote: "تحتوي جميع المستندات التي يتم تنزيلها من هذه المكتبة على علامة مائية رقمية غير مرئية خاصة بحسابك لمنع أي إعادة توزيع عامة غير قانونية للملكية الفكرية للمكتب.",
 
     // Footer
-    footerDesc: "التميز في الاستشارات الاستراتيجية الدولية من قبل الشمري. تأسيس الشركات، تنويع الاستثمارات، وهيكلة شبكات الاستيراد والتصدير العالمية.",
+    footerDesc: "التميز في الاستشارات الاستراتيجية الدولية من قبل GLOBAL-PUENTE. تأسيس الشركات، تنويع الاستثمارات، وهيكلة شبكات الاستيراد والتصدير العالمية.",
     footerElite: "خبرة دولية نخبوية",
     footerNavTitle: "التنقل",
     footerServicesTitle: "مجالات التدخل",
     footerOfficeTitle: "المكتب الدولي",
-    footerOfficeAddr: "بوليفارد وسط المدينة، برج الشمري\nالإمارات العربية المتحدة والمكتب الدولي",
-    footerRights: "ENWII. جميع الحقوق محفوظة. مكتب استشارات الأعمال الدولية.",
+    footerOfficeAddr: "بوليفارد وسط المدينة، برج GLOBAL-PUENTE\nالإمارات العربية المتحدة والمكتب الدولي",
+    footerRights: "GLOBAL-PUENTE. جميع الحقوق محفوظة. مكتب استشارات الأعمال الدولية.",
     footerTerms: "الشروط العامة",
     footerPrivacy: "سياسة الخصوصية",
 
@@ -554,7 +554,7 @@ export const translations = {
     loginRegisterLink: "إنشاء ملف عضوية أعمال",
 
     registerTitle: "إنشاء حساب عضوية",
-    registerSubtitle: "الانضمام إلى مكتب ENWII للأعمال",
+    registerSubtitle: "الانضمام إلى مكتب GLOBAL-PUENTE للأعمال",
     registerLabelName: "الاسم الكامل لممثل الأعمال",
     registerLabelEmail: "البريد الإلكتروني للأعمال الآمن",
     registerLabelPassword: "كلمة المرور (8 رموز على الأقل)",

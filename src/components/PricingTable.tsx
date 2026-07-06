@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Route, User } from "../types";
 import { Check, ShieldCheck, Sparkles, AlertCircle, Coins, CreditCard } from "lucide-react";
+import { safeJson } from "../utils";
 
 interface PricingTableProps {
   setCurrentRoute: (route: Route) => void;
@@ -33,7 +34,7 @@ export default function PricingTable({ setCurrentRoute, user, setPaymentAmount }
         "Planification et soumission d'une consultation 1-à-1 privée",
         "Accès illimité à tous les calculateurs stratégiques",
         "Téléchargement de l'ensemble des guides et canevas légaux",
-        "Revue critique de votre dossier par l'équipe d'Al-Shammari",
+        "Revue critique de votre dossier par l'équipe de GLOBAL-PUENTE",
         "Réponse garantie sous 48 heures ouvrées"
       ],
       popular: true
@@ -43,7 +44,7 @@ export default function PricingTable({ setCurrentRoute, user, setPaymentAmount }
       price: 500,
       description: "Pour les projets d'affaires complexes nécessitant des introductions stratégiques.",
       features: [
-        "Priorité absolue sur l'agenda d'Al-Shammari pour la consultation",
+        "Priorité absolue sur l'agenda de GLOBAL-PUENTE pour la consultation",
         "Introduction personnalisée auprès d'un agent de liaison local",
         "Analyse fiscale comparée de 3 juridictions cibles",
         "Messagerie privée directe et canal d'urgence",
@@ -78,7 +79,7 @@ export default function PricingTable({ setCurrentRoute, user, setPaymentAmount }
         body: JSON.stringify({ amount })
       });
 
-      const data = await res.json();
+      const data = await safeJson(res);
       if (!res.ok) {
         throw new Error(data.error || "Impossible d'initier la session.");
       }
@@ -110,7 +111,7 @@ export default function PricingTable({ setCurrentRoute, user, setPaymentAmount }
           </h2>
           <div className="w-16 h-[1px] bg-[#D4AF37]/40 mx-auto mt-4" />
           <p className="max-w-2xl mx-auto text-[#F5E6D3]/60 mt-4 text-xs sm:text-sm font-serif italic leading-relaxed">
-            Débloquez instantanément l'ensemble des modules analytiques, la planification de consultation privée, et la documentation d'élite d'Al-Shammari.
+            Débloquez instantanément l'ensemble des modules analytiques, la planification de consultation privée, et la documentation d'élite de GLOBAL-PUENTE.
           </p>
         </div>
 

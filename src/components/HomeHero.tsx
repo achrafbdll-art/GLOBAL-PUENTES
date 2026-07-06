@@ -2,6 +2,7 @@ import { Route, User } from "../types";
 import { ArrowRight, Sparkles, Globe, ShieldCheck } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../LanguageContext";
+import FlagAnimation3D from "./FlagAnimation3D";
 
 interface HomeHeroProps {
   setCurrentRoute: (route: Route) => void;
@@ -139,7 +140,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
             </motion.div>
           </div>
 
-          {/* Right Column: Stunning Premium framed Portrait / Hero Photo of Al-Shammari */}
+          {/* Right Column: Stunning Premium framed Portrait / Hero Photo of GLOBAL-PUENTE */}
           <div className="lg:col-span-5 w-full flex justify-center items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -151,7 +152,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
               <div className="relative w-full h-full overflow-hidden border border-[#D4AF37]/15 rounded-xs">
                 <img
                   src="/src/assets/images/al_shammari_portrait_1783283014114.jpg"
-                  alt="Al-Shammari Business Expert"
+                  alt="GLOBAL-PUENTE Business Expert"
                   className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
@@ -174,7 +175,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
                   <div className="flex items-center justify-between">
                     <div className="text-left">
                       <p className="text-[#D4AF37] text-[10px] font-black tracking-[0.2em] uppercase font-sans-ui">
-                        AL-SHAMMARI
+                        GLOBAL-PUENTE
                       </p>
                       <p className="text-white text-xs font-serif italic mt-0.5">
                         {language === "ar" ? "خبير أعمال دولي معتمد" : language === "es" ? "Asesor Internacional Certificado" : "Conseiller International Certifié"}
@@ -215,6 +216,16 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
             <Sparkles className="w-5 h-5 text-[#D4AF37]/50" />
             <span>{t("heroStartingPrice")}</span>
           </div>
+        </motion.div>
+
+        {/* 3D Flag Animation Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.9 }}
+          className="mt-12 w-full"
+        >
+          <FlagAnimation3D />
         </motion.div>
       </div>
 
