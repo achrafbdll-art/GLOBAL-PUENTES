@@ -43,18 +43,14 @@ const photos = [
   }
 ];
 
-// Et pour l'image de fond (Background) :
 <img
   src="/images/hero_background_1783280300050.jpg"
   alt="Background"
-  // ... gardez le reste du code identique
 />
 
-// Et pour le portrait :
 <img
   src="/images/al_shammari_portrait_1783283014114.jpg"
   alt="Portrait"
-  // ... gardez le reste du code identique
 />
   const scrollingPhotos = [...photos, ...photos, ...photos, ...photos];
 
