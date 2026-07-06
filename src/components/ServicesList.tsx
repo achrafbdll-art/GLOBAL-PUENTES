@@ -23,93 +23,93 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
   const { language, t } = useLanguage();
 
   const servicesData = {
-    fr: {
-      sectionBadge: "Portefeuille d'Accompagnement",
-      sectionTitle: "Services d'Expertise",
-      sectionDesc: "Une gamme de prestations d'élite conçue pour répondre de manière chirurgicale aux défis de la mondialisation des affaires.",
-      deliverablesLabel: "Livrables de l'Expert :",
-      learnMore: "En savoir plus",
-      ctaTitle: "Besoin d'un diagnostic d'affaires sur-mesure ?",
-      ctaDesc: "Accédez à notre espace membre exclusif pour soumettre votre dossier d'affaires directement à l'expert GLOBAL-PUENTE et programmer votre session d'audit stratégique privée.",
-      ctaBtn: "Débloquer l'Accès",
+    en: {
+      sectionBadge: "Support Portfolio",
+      sectionTitle: "Expert Services",
+      sectionDesc: "A range of elite services designed to surgically respond to the challenges of business globalization.",
+      deliverablesLabel: "Expert Deliverables:",
+      learnMore: "Learn more",
+      ctaTitle: "Need a custom business diagnosis?",
+      ctaDesc: "Access our exclusive member area to submit your business case directly to expert GLOBAL-PUENTE and schedule your private strategic audit session.",
+      ctaBtn: "Unlock Access",
       list: [
         {
           icon: Building2,
-          title: "Montage Offshore & Juridictionnel",
-          tagline: "Sécurisation fiscale internationale",
-          description: "Conception et immatriculation de structures sociétaires complexes. Nous analysons les accords de non-double imposition, configurons des holdings solides et administrons l'ouverture de comptes bancaires multi-devises dans des places financières réputées.",
+          title: "Offshore Setup & Jurisdictional Structuring",
+          tagline: "International tax securitization",
+          description: "Design and registration of complex corporate structures. We analyze double taxation treaties, set up solid holdings, and manage the opening of multi-currency bank accounts in reputable financial centers.",
           details: [
-            "Sélection de la juridiction optimale (Dubaï, Singapour, Delaware, Suisse)",
-            "Rédaction des statuts de holdings et trusts de protection",
-            "Introduction bancaire auprès d'établissements de premier ordre",
-            "Conformité réglementaire totale avec le CRS et FATCA"
+            "Selection of the optimal jurisdiction (Dubai, Singapore, Delaware, Switzerland)",
+            "Drafting of articles of incorporation for holdings and asset protection trusts",
+            "Bank introductions with top-tier financial institutions",
+            "Full regulatory compliance with CRS and FATCA"
           ],
-          pricing: "À partir de 1,200$"
+          pricing: "Starting at $1,200"
         },
         {
           icon: Compass,
-          title: "Expansion Globale & Relocalisation",
-          tagline: "Corridors de croissance",
-          description: "Planification d'entrée sur les marchés émergents à forte croissance. Nous réalisons les études de faisabilité réglementaires et opérationnelles nécessaires pour implanter vos opérations physiques et vos équipes à l'étranger.",
+          title: "Global Expansion & Relocation",
+          tagline: "Growth corridors",
+          description: "Planning entry into high-growth emerging markets. We conduct the regulatory and operational feasibility studies required to set up your physical operations and teams abroad.",
           details: [
-            "Études de marché et cartographies concurrentielles avancées",
-            "Partenariats locaux et réseaux de sponsors accrédités",
-            "Accompagnement aux visas d'investisseurs (Golden Visa, Green Card)",
-            "Recrutement de cadres exécutifs qualifiés sur place"
+            "Market research and advanced competitive analysis",
+            "Local partnerships and accredited sponsor networks",
+            "Support with investor visas (Golden Visa, Green Card)",
+            "Recruitment of qualified executive talent on-site"
           ],
-          pricing: "À partir de 2,500$"
+          pricing: "Starting at $2,500"
         },
         {
           icon: BadgeDollarSign,
-          title: "Ingénierie Patrimoniale & Investissement",
-          tagline: "Préservation d'actifs tangibles",
-          description: "Conseil indépendant en diversification et acquisition d'actifs d'élite. Nous identifions des opportunités hors-marché dans l'immobilier résidentiel et commercial de prestige, les énergies, la logistique et les métaux précieux.",
+          title: "Wealth Engineering & Investment",
+          tagline: "Preservation of tangible assets",
+          description: "Independent advisory on diversification and acquisition of elite assets. We identify off-market opportunities in premium residential and commercial real estate, energy, logistics, and precious metals.",
           details: [
-            "Due Diligence juridique et financière rigoureuse",
-            "Négociation de transactions immobilières off-market",
-            "Financement et syndication de projets d'infrastructure",
-            "Planification successorale transfrontalière"
+            "Rigorous legal and financial Due Diligence",
+            "Negotiation of off-market real estate transactions",
+            "Financing and syndication of infrastructure projects",
+            "Cross-border succession planning"
           ],
-          pricing: "À partir de 3,000$"
+          pricing: "Starting at $3,000"
         },
         {
           icon: TrendingUp,
-          title: "Logistique & Trade Finance",
-          tagline: "Optimisation de l'import-export",
-          description: "Facilitation et structuration d'opérations de négoce de marchandises internationales. Nous aidons à émettre et négocier des instruments financiers complexes pour sécuriser vos flux et rationaliser vos chaînes de logistique globale.",
+          title: "Logistics & Trade Finance",
+          tagline: "Import-export optimization",
+          description: "Facilitation and structuring of international commodity trade operations. We help issue and negotiate complex financial instruments to secure your cash flows and streamline your global supply chain.",
           details: [
-            "Financement de créances commerciales et lettres de crédit (L/C)",
-            "Audit des clauses Incoterms et contrats de fret maritime",
-            "Mise en relation avec des agents de douane et transitaires agréés",
-            "Atténuation des risques de change par contrats à terme"
+            "Trade accounts receivable financing and letters of credit (L/C)",
+            "Audit of Incoterms clauses and maritime freight contracts",
+            "Connections with licensed customs brokers and freight forwarders",
+            "Currency risk mitigation through forward contracts"
           ],
-          pricing: "À partir de 1,800$"
+          pricing: "Starting at $1,800"
         },
         {
           icon: Shuffle,
-          title: "Négociation & Représentation d'Affaires",
-          tagline: "Influence et arbitrages stratégiques",
-          description: "Défense exclusive de vos intérêts lors de négociations transactionnelles complexes. GLOBAL-PUENTE intervient personnellement comme intermédiaire neutre ou représentant engagé pour débloquer des transactions majeures.",
+          title: "Negotiation & Business Representation",
+          tagline: "Strategic influence and arbitration",
+          description: "Exclusive defense of your interests during complex transactional negotiations. GLOBAL-PUENTE personally intervenes as a neutral intermediary or committed representative to unlock major deals.",
           details: [
-            "Représentation exclusive lors d'arbitrages de conflits d'associés",
-            "Négociation d'achats ou ventes d'actifs corporatifs majeurs",
-            "Audit de contrats de licences d'exploitation exclusives",
-            "Introduction auprès de ministères et cercles d'influence"
+            "Exclusive representation during partner dispute arbitrations",
+            "Negotiation of purchases or sales of major corporate assets",
+            "Audit of exclusive operating licensing agreements",
+            "Introductions to ministries and circles of influence"
           ],
-          pricing: "Sur devis uniquement"
+          pricing: "On quote only"
         },
         {
           icon: HelpCircle,
-          title: "Mentorat de Direction & Consultations",
-          tagline: "Clarté décisionnelle absolue",
-          description: "Un accès direct et régulier aux conseils stratégiques de GLOBAL-PUENTE. Séance intensive de cadrage de 90 minutes ou suivi mensuel sur-mesure pour optimiser vos performances et accélérer votre leadership.",
+          title: "Executive Mentorship & Consultations",
+          tagline: "Absolute decision clarity",
+          description: "Direct and regular access to the strategic advice of GLOBAL-PUENTE. Intensive 90-minute scoping session or tailored monthly follow-up to optimize your performance and accelerate your leadership.",
           details: [
-            "Séance de diagnostic critique et revue de plan stratégique",
-            "Simulation de pitchs d'investissements et plans de financement",
-            "Assistance téléphonique directe en cas d'urgence opérationnelle",
-            "Aide à la prise de décision sous forte incertitude"
+            "Critical diagnostic session and strategic plan review",
+            "Simulation of investment pitches and financing plans",
+            "Direct telephone assistance for operational emergencies",
+            "Decision support under high uncertainty"
           ],
-          pricing: "Session : 350$ (ou via l'accès membre à 50$)"
+          pricing: "Session: $350 (or via $50 member access)"
         }
       ]
     },
@@ -295,7 +295,7 @@ export default function ServicesList({ setCurrentRoute }: ServicesListProps) {
     }
   };
 
-  const activeLangData = servicesData[language] || servicesData["fr"];
+  const activeLangData = servicesData[language] || servicesData["es"];
 
   return (
     <section className="py-24 bg-[#050505]/80 backdrop-blur-xs relative overflow-hidden">

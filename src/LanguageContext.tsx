@@ -1,12 +1,12 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import { translations } from "./translations";
 
-export type Language = "fr" | "es" | "ar";
+export type Language = "es" | "en" | "ar";
 
 interface LanguageContextProps {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: keyof typeof translations["fr"]) => string;
+  t: (key: keyof typeof translations["es"]) => string;
 }
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
@@ -22,7 +22,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("global_puente_lang", lang);
   };
 
-  // Adjust text direction for Arabic
   useEffect(() => {
     if (language === "ar") {
       document.documentElement.dir = "rtl";
@@ -33,9 +32,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   }, [language]);
 
-  const t = (key: keyof typeof translations["fr"]): string => {
-    const langSet = translations[language] || translations["fr"];
-    return langSet[key] || translations["fr"][key] || key;
+  const t = (key: keyof typeof translations["es"]): string => {
+    const langSet = translations[language] || translations["es"];
+    return langSet[key] || translations["es"][key] || key;
   };
 
   return (

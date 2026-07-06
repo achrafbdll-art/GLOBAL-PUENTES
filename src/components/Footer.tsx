@@ -11,25 +11,25 @@ export default function Footer({ setCurrentRoute }: FooterProps) {
   const { language, t } = useLanguage();
 
   const footerTranslations = {
-    fr: {
-      brandDesc: "L'excellence du conseil stratégique international par GLOBAL-PUENTE. Création d'entreprises, diversification d'investissements et structuration de réseaux mondiaux d'import-export.",
-      brandTagline: "Expertise d'Élite internationale",
+    en: {
+      brandDesc: "International strategic consulting excellence by GLOBAL-PUENTE. Business creation, investment diversification, and structuring of global import-export networks.",
+      brandTagline: "Elite International Expertise",
       navHeader: "Navigation",
-      navHome: "Accueil",
-      navAbout: "À Propos de GLOBAL-PUENTE",
-      navServices: "Nos Services",
-      navPricing: "Tarifs & Expertise",
-      focusHeader: "Domaines d'Intervention",
-      focusItem1: "Création & Montage Offshore",
-      focusItem2: "Investissement Immobilier & Marchés",
-      focusItem3: "Réseaux Logistiques Import-Export",
-      focusItem4: "Mentorat Privé & Négociation",
-      officeHeader: "Bureau International",
-      officeAddress: "Downtown Boulevard, GLOBAL-PUENTE Tower, Émirats Arabes Unis (EAU) & Bureau International",
-      copyright: "GLOBAL-PUENTE. Tous droits réservés. Cabinet de Conseil d'Affaires International.",
-      stripeLabel: "Paiements Chiffrés SSL - Stripe",
-      terms: "Conditions Générales",
-      privacy: "Politique de Confidentialité"
+      navHome: "Home",
+      navAbout: "About GLOBAL-PUENTE",
+      navServices: "Our Services",
+      navPricing: "Pricing & Expertise",
+      focusHeader: "Areas of Intervention",
+      focusItem1: "Offshore Setup & Structuring",
+      focusItem2: "Real Estate Investment & Markets",
+      focusItem3: "Logistics Networks Import-Export",
+      focusItem4: "Private Mentoring & Negotiation",
+      officeHeader: "International Office",
+      officeAddress: "Downtown Boulevard, GLOBAL-PUENTE Tower, United Arab Emirates (UAE) & International Office",
+      copyright: "GLOBAL-PUENTE. All rights reserved. International Business Consulting Firm.",
+      stripeLabel: "SSL Encrypted Payments - Stripe",
+      terms: "Terms & Conditions",
+      privacy: "Privacy Policy"
     },
     es: {
       brandDesc: "La excelencia de la consultoría estratégica internacional por GLOBAL-PUENTE. Creación de empresas, diversificación de inversiones y estructuración de redes globales de importación y exportación.",
@@ -73,7 +73,7 @@ export default function Footer({ setCurrentRoute }: FooterProps) {
     }
   };
 
-  const f = footerTranslations[language] || footerTranslations["fr"];
+  const f = footerTranslations[language] || footerTranslations["es"];
 
   return (
     <footer className="bg-[#050505] border-t border-[#D4AF37]/15 pt-16 pb-12 text-neutral-400">

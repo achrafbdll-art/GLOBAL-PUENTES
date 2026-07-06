@@ -27,8 +27,8 @@ export default function Header({ currentRoute, setCurrentRoute, user, onLogout }
   };
 
   const prestigeStatus = {
-    fr: "PRESTIGE & SÉCURITÉ STANDARD",
     es: "ESTÁNDAR DE PRESTIGIO Y SEGURIDAD",
+    en: "PRESTIGE & SECURITY STANDARD",
     ar: "معايير الهيبة والأمان المعتمدة"
   };
 
@@ -50,7 +50,7 @@ export default function Header({ currentRoute, setCurrentRoute, user, onLogout }
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37]"></span>
             </span>
             <span className="font-bold tracking-[0.3em]">
-              {prestigeStatus[language] || prestigeStatus["fr"]}
+              {prestigeStatus[language] || prestigeStatus["es"]}
             </span>
           </div>
 
@@ -61,19 +61,8 @@ export default function Header({ currentRoute, setCurrentRoute, user, onLogout }
               <span>contact@global-puente.com</span>
             </span>
             
-            {/* Elegant Circular Language Badge Selectors (Matching FR | GB | MA style) */}
+            {/* Elegant Circular Language Badge Selectors (ES, EN, AR) */}
             <div className="flex items-center space-x-1.5">
-              <button
-                onClick={() => setLanguage("fr")}
-                className={`w-6 h-6 rounded-full flex items-center justify-center text-[9px] font-sans-ui font-black uppercase transition-all duration-200 border cursor-pointer ${
-                  language === "fr"
-                    ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.4)]"
-                    : "border-[#D4AF37]/20 text-[#F5E6D3]/40 hover:border-[#D4AF37]/50 hover:text-[#D4AF37]"
-                }`}
-                title="Français"
-              >
-                FR
-              </button>
               <button
                 onClick={() => setLanguage("es")}
                 className={`w-6 h-6 rounded-full flex items-center justify-center text-[9px] font-sans-ui font-black uppercase transition-all duration-200 border cursor-pointer ${
@@ -86,6 +75,17 @@ export default function Header({ currentRoute, setCurrentRoute, user, onLogout }
                 ES
               </button>
               <button
+                onClick={() => setLanguage("en")}
+                className={`w-6 h-6 rounded-full flex items-center justify-center text-[9px] font-sans-ui font-black uppercase transition-all duration-200 border cursor-pointer ${
+                  language === "en"
+                    ? "bg-[#D4AF37] text-black border-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.4)]"
+                    : "border-[#D4AF37]/20 text-[#F5E6D3]/40 hover:border-[#D4AF37]/50 hover:text-[#D4AF37]"
+                }`}
+                title="English"
+              >
+                EN
+              </button>
+              <button
                 onClick={() => setLanguage("ar")}
                 className={`w-6 h-6 rounded-full flex items-center justify-center text-[9px] font-sans-ui font-black uppercase transition-all duration-200 border cursor-pointer ${
                   language === "ar"
@@ -94,7 +94,7 @@ export default function Header({ currentRoute, setCurrentRoute, user, onLogout }
                 }`}
                 title="العربية"
               >
-                العربية
+                AR
               </button>
             </div>
           </div>

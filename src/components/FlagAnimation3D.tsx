@@ -1,21 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { motion, useAnimation } from "motion/react";
+import { motion } from "motion/react";
 import { useLanguage } from "../LanguageContext";
 import { Shield, Sparkles, Navigation, Globe } from "lucide-react";
 
 interface FlagData {
   id: string;
   name: string;
-  description: {
-    es: string;
-    fr: string;
-    ar: string;
-  };
-  details: {
-    es: string;
-    fr: string;
-    ar: string;
-  };
+  description: string;
+  details: string;
   svg: React.ReactNode;
 }
 
@@ -37,17 +29,9 @@ export default function FlagAnimation3D() {
   const flags: FlagData[] = [
     {
       id: "es",
-      name: language === "ar" ? "إسبانيا" : language === "fr" ? "Espagne" : "España",
-      description: {
-        es: "Puerta de Entrada a Europa",
-        fr: "Porte d'Entrée vers l'Europe",
-        ar: "بوابة الدخول إلى أوروبا"
-      },
-      details: {
-        es: "Plataforma de conexión logística estratégica con el mercado único europeo y regulación de alta seguridad.",
-        fr: "Plateforme de connexion logistique stratégique avec le marché unique européen et réglementation de haute sécurité.",
-        ar: "منصة ربط لوجستي استراتيجي مع السوق الأوروبية المشتركة وتنظيم عالي الأمان."
-      },
+      name: "Spain",
+      description: "Gateway to Europe",
+      details: "Strategic logistical connection platform with the European single market and high-security regulation.",
       svg: (
         <svg viewBox="0 0 750 500" className="w-full h-full object-cover">
           {/* Spain Flag */}
@@ -70,17 +54,9 @@ export default function FlagAnimation3D() {
     },
     {
       id: "uae",
-      name: language === "ar" ? "الإمارات العربية المتحدة" : language === "fr" ? "Émirats Arabes Unis" : "Emiratos Árabes Unidos",
-      description: {
-        es: "Centro de Negocios Global",
-        fr: "Hub d'Affaires Mondial",
-        ar: "مركز الأعمال العالمي"
-      },
-      details: {
-        es: "Flujo intercontinental de capitales y mercancías. Epicentro financiero estratégico en Dubái.",
-        fr: "Flux intercontinentaux de capitaux et marchandises. Épicentre financier stratégique à Dubaï.",
-        ar: "تدفقات رؤوس الأموال والسلع العابرة للقارات. مركز مالي استراتيجي في دبي."
-      },
+      name: "United Arab Emirates",
+      description: "Global Business Hub",
+      details: "Intercontinental flow of capital and commodities. Strategic financial epicenter in Dubai.",
       svg: (
         <svg viewBox="0 0 600 300" className="w-full h-full object-cover">
           {/* UAE Flag */}
@@ -93,17 +69,9 @@ export default function FlagAnimation3D() {
     },
     {
       id: "ma",
-      name: language === "ar" ? "المغرب" : language === "fr" ? "Maroc" : "Marruecos",
-      description: {
-        es: "Puerta de África y Manufactura",
-        fr: "Porte de l'Afrique & Industrie",
-        ar: "بوابة أفريقيا والتصنيع"
-      },
-      details: {
-        es: "Corredor comercial e industrial ágil y dinámico que une el Atlántico, el Mediterráneo y África Subsahariana.",
-        fr: "Couloir commercial et industriel agile unissant l'Atlantique, la Méditerranée et l'Afrique Subsaharienne.",
-        ar: "ممر تجاري وصناعي مرن وديناميكي يربط بين المحيط الأطلسي والبحر الأبيض المتوسط وأفريقيا جنوب الصحراء."
-      },
+      name: "Morocco",
+      description: "Gateway to Africa & Manufacturing",
+      details: "Agile and dynamic trade and industrial corridor linking the Atlantic, Mediterranean, and Sub-Saharan Africa.",
       svg: (
         <svg viewBox="0 0 900 600" className="w-full h-full object-cover">
           {/* Morocco Flag */}
@@ -130,17 +98,9 @@ export default function FlagAnimation3D() {
     },
     {
       id: "eu",
-      name: language === "ar" ? "الاتحاد الأوروبي" : language === "fr" ? "Union Européenne" : "Unión Europea",
-      description: {
-        es: "Marco Común de Inversión",
-        fr: "Cadre Commun d'Investissement",
-        ar: "الإطار المشترك للاستثمار"
-      },
-      details: {
-        es: "Estabilidad jurídica, libre circulación comercial y estándares de cumplimiento del más alto nivel.",
-        fr: "Stabilité juridique, libre circulation commerciale et standards de conformité au plus haut niveau.",
-        ar: "الاستقرار القانوني، حرية الحركة التجارية، ومعايير الامتثال على أعلى مستوى."
-      },
+      name: "European Union",
+      description: "Common Investment Framework",
+      details: "Legal stability, free trade circulation, and compliance standards of the highest caliber.",
       svg: (
         <svg viewBox="0 0 810 540" className="w-full h-full object-cover">
           {/* EU Flag */}
@@ -180,14 +140,14 @@ export default function FlagAnimation3D() {
         <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gradient-to-r from-[#D4AF37]/10 to-[#8B7355]/10 border border-[#D4AF37]/20 rounded-full mb-3">
           <Globe className="w-3 h-3 text-[#D4AF37]" />
           <span className="text-[9px] font-bold text-[#D4AF37] tracking-[0.25em] uppercase font-sans-ui">
-            {language === "ar" ? "ممر الاستثمار الاستراتيجي" : language === "fr" ? "Couloir Stratégique International" : "Corredor Estratégico Internacional"}
+            Strategic Investment Corridor
           </span>
         </div>
         <h3 className="text-xl sm:text-2xl font-serif text-white italic tracking-wide">
-          {language === "ar" ? "ربط النفوذ الاقتصادي الإقليمي" : language === "fr" ? "Synergie Économique Multilatérale" : "Sinergias Económicas Multilaterales"}
+          Connecting Regional Economic Influence
         </h3>
         <p className="text-[11px] text-[#F5E6D3]/50 font-light mt-1 uppercase tracking-widest">
-          {language === "ar" ? "إسبانيا • الإمارات • المغرب • الاتحاد الأوروبي" : language === "fr" ? "Espagne • Émirats • Maroc • Union Européenne" : "España • Emiratos • Marruecos • Unión Europea"}
+          Spain • UAE • Morocco • European Union
         </p>
       </div>
 
@@ -286,11 +246,11 @@ export default function FlagAnimation3D() {
               <div className="flex items-center space-x-2 text-[#D4AF37]">
                 <Navigation className="w-3.5 h-3.5 animate-bounce" />
                 <h4 className="text-xs font-bold uppercase tracking-[0.18em]">
-                  {flags[activeFlag].name} — {flags[activeFlag].description[language] || flags[activeFlag].description.es}
+                  {flags[activeFlag].name} — {flags[activeFlag].description}
                 </h4>
               </div>
               <p className="text-xs sm:text-sm text-[#F5E6D3]/85 font-serif italic leading-relaxed">
-                {flags[activeFlag].details[language] || flags[activeFlag].details.es}
+                {flags[activeFlag].details}
               </p>
             </motion.div>
           ) : (
@@ -298,11 +258,11 @@ export default function FlagAnimation3D() {
               <p className="text-[10px] text-neutral-500 uppercase tracking-widest font-sans-ui flex items-center justify-center space-x-2">
                 <Shield className="w-3 h-3 text-[#D4AF37]/50" />
                 <span>
-                  {language === "ar" ? "مرر الماوس فوق أي علم لمعاينة الممر الاستراتيجي" : language === "fr" ? "Survolez un drapeau pour analyser l'axe commercial" : "Pase el cursor sobre un país para analizar el corredor de negocios"}
+                  Hover over a country to analyze its strategic corridor
                 </span>
               </p>
               <p className="text-xs text-neutral-600 font-light italic">
-                {language === "ar" ? "الهيكلة البينية عبر القارات تحمي رؤوس أموال النخبة" : language === "fr" ? "La structuration de confiance intercontinentale pour sécuriser vos capitaux." : "La estructuración de confianza intercontinental para asegurar sus capitales de élite."}
+                Trustworthy intercontinental structuring to secure your elite capital.
               </p>
             </div>
           )}

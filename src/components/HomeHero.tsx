@@ -25,22 +25,22 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
   const photos = [
     {
       src: "/src/assets/images/dubai_skyline_luxury_1783282434679.jpg",
-      title: language === "ar" ? "دبي — مركز الأعمال الدولي" : language === "es" ? "Dubái — Centro de Negocios Internacional" : "Dubaï — Hub d'Affaires International",
+      title: "Dubai — Global Business Hub",
       tag: "Dubai"
     },
     {
       src: "/src/assets/images/cargo_ship_trade_1783282445365.jpg",
-      title: language === "ar" ? "الخدمات اللوجستية وتمويل التجارة الدولية" : language === "es" ? "Logística y Financiación Global" : "Logistique & Trade Finance Mondial",
+      title: "Logistics & Global Trade Finance",
       tag: "Logistics"
     },
     {
       src: "/src/assets/images/geneva_wealth_room_1783282456159.jpg",
-      title: language === "ar" ? "جنيف — إدارة الثروات الخاصة" : language === "es" ? "Ginebra — Gestión de Patrimonios" : "Genève — Gestion de Fortune",
+      title: "Geneva — Private Wealth Management",
       tag: "Geneva"
     },
     {
       src: "/src/assets/images/executive_negotiation_1783282468019.jpg",
-      title: language === "ar" ? "الهيكلة والمفاوضات النخبوية" : language === "es" ? "Estructuras y Negociaciones de Élite" : "Montages & Négociations d'Élite",
+      title: "Elite Structuring & Negotiations",
       tag: "Executive"
     }
   ];
@@ -178,7 +178,7 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
                         GLOBAL-PUENTE
                       </p>
                       <p className="text-white text-xs font-serif italic mt-0.5">
-                        {language === "ar" ? "خبير أعمال دولي معتمد" : language === "es" ? "Asesor Internacional Certificado" : "Conseiller International Certifié"}
+                        Certified International Business Advisor
                       </p>
                     </div>
                     {/* Tiny secure badge */}
