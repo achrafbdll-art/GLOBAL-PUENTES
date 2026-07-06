@@ -5,7 +5,6 @@ import { useLanguage } from "../LanguageContext";
 import FlagAnimation3D from "./FlagAnimation3D";
 
 
-// Import images directly to ensure they're bundled correctly
 import eeeImage from "../assets/images/eee.webp";
 import cargoShipImage from "../assets/images/cargo_ship_trade_1783282445365.jpg";
 import genevaImage from "../assets/images/geneva_wealth_room_1783282456159.jpg";
