@@ -24,9 +24,6 @@ export default function HomeHero({ setCurrentRoute, user }: HomeHeroProps) {
 
   const photos = [
     {
-      import heroBackground from "../assets/images/hero_background_1783280300050.jpg";
-import portrait from "../assets/images/al_shammari_portrait_1783283014114.jpg";
-import eee from "../assets/images/eee.webp";
   <img src={heroBackground} />
 <img src={portrait} />
 <img src={eee} />
