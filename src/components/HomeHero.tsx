@@ -1,4 +1,4 @@
-iimport { Route, User } from "../types";
+import { Route, User } from "../types";
 import { ArrowRight, Sparkles, Globe, ShieldCheck } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../LanguageContext";
